@@ -1,0 +1,3147 @@
+Data File: ADDHW1N(Partial Data Codebook - Max of 10 responses shown)
+
+1) AID
+Respondent Identifier
+RANGE: 57100270 to 99719978
+	N	Mean	Std. Deviation
+Total	6504	94171775.874	6550036.012
+
+
+2) SIZE
+Number of questionnaires in school
+RANGE: 30 to 2559
+	N	Mean	Std. Deviation
+Total	4397	742.951	510.382
+
+
+3) IDGX2
+In-degree: The number of times ego is nominated by other students in the school
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4397	4.551	3.692
+
+
+4) ODGX2
+Out-degree: The number of people respondent nominates in the school
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	4397	4.458	3.074
+
+
+5) NOUTNOM
+Number of nominations outside the school: The number of people ego nominates from outside the school
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	4397	1.406	2.144
+
+
+6) TAB113
+Number of matched nominations to sister school: The number of valid alters ego nominates from the sister school
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	2702	0.125	0.55
+0)	2498	92.5
+1)	131	4.8
+2)	42	1.6
+3)	18	0.7
+4)	4	0.1
+5)	4	0.1
+6)	2	0.1
+7)	2	0.1
+8)	1	0.0
+Missing	3802
+
+
+7) BCENT10X
+Bonacich centrality, B=0.1: Ego's centrality, weighted by the centrality of those to whom he/she sends ties
+RANGE: 0 to 4.28827913936746
+	N	Mean	Std. Deviation
+Total	4397	0.792	0.631
+
+
+8) REACH
+Reach: Maximum number of alters ego can reach in the total friendship network
+RANGE: 0 to 1791
+	N	Mean	Std. Deviation
+Total	4397	474.572	431.075
+
+
+9) REACH3
+Reach in three steps: A step refers to the length of a path from i to j. If i nominates j and j nominates k and k nominates l, then i and l are three steps apart. The value of the variable REACH3 is the total number of alters ego can reach in three steps.
+RANGE: 0 to 264
+	N	Mean	Std. Deviation
+Total	4397	56.656	46.817
+
+
+10) IGDMEAN
+Mean geodesic distance: Average path length between ego and ego's complete set of reachable alters.
+RANGE: 1 to 21.3897596656217
+	N	Mean	Std. Deviation
+Total	3705	5.284	1.62
+
+
+11) PRXPREST
+Proximity prestige: Measures the prestige of ego relative to the number of people who can reach ego
+RANGE: 4.44642063139173E-04 to 0.774193548387097
+	N	Mean	Std. Deviation
+Total	4020	0.161	0.07
+
+
+12) INFLDMN
+Influence domain: Number of alters who can reach ego
+RANGE: 0 to 1705
+	N	Mean	Std. Deviation
+Total	4397	474.343	384.88
+
+
+13) HAVEBMF
+Ego has a best male friend: Dummy variable indicating whether ego nominated a male friend in the school as his/her best friend
+RANGE: 0 to 1
+	N	Mean	Std. Deviation
+Total	4397	0.548	0.498
+0)	1989	45.2
+1)	2408	54.8
+Missing	2107
+
+
+14) HAVEBFF
+Ego has a best female friend: Dummy variable indicating whether ego nominated a female friend in the school as his/her best friend
+RANGE: 0 to 1
+	N	Mean	Std. Deviation
+Total	4397	0.605	0.489
+0)	1737	39.5
+1)	2660	60.5
+Missing	2107
+
+
+15) BMFRECIP
+Best male friend reciprocates: Dummy variable indicating whether the person ego nominated as his/her best male friend nominated ego a friend
+RANGE: 0 to 1
+	N	Mean	Std. Deviation
+Total	1963	0.544	0.498
+0)	896	45.6
+1)	1067	54.4
+Missing	4541
+
+
+16) BMFRECBF
+Best male friend reciprocates as best friend: Dummy variable indicating whether the person ego nominated as his/her best male friend nominated ego as his best friend
+RANGE: 0 to 1
+	N	Mean	Std. Deviation
+Total	1963	0.302	0.459
+0)	1371	69.8
+1)	592	30.2
+Missing	4541
+
+
+17) BFFRECIP
+Best female friend reciprocates: Dummy variable indicating whether the person ego nominated as his/her best female friend nominated ego as any type of friend
+RANGE: 0 to 1
+	N	Mean	Std. Deviation
+Total	2313	0.627	0.484
+0)	863	37.3
+1)	1450	62.7
+Missing	4191
+
+
+18) BFFRECBF
+Best female friend reciprocates as best friend: Dummy variable indicating whether the person ego nominated as his/her best female friend nominated ego as her best friend
+RANGE: 0 to 1
+	N	Mean	Std. Deviation
+Total	2313	0.357	0.479
+0)	1488	64.3
+1)	825	35.7
+Missing	4191
+
+
+19) ESDEN
+Ego send-network density: Density of the network composed of ego and the set of alters nominated by ego
+RANGE: 9.09090909090909E-02 to 1
+	N	Mean	Std. Deviation
+Total	3705	0.412	0.203
+
+
+20) NES
+Size of ego send-network: Number of alters nominated by ego, plus ego
+RANGE: 1 to 11
+	N	Mean	Std. Deviation
+Total	4397	5.458	3.074
+
+
+21) ERDEN
+Ego receive-network density: Density of the network composed of ego and the set of alters who nominate ego
+RANGE: 8.17204301075269E-02 to 1
+	N	Mean	Std. Deviation
+Total	4020	0.426	0.211
+
+
+22) NER
+Size of ego receive-network: Number of alters who nominate ego, plus ego
+RANGE: 1 to 31
+	N	Mean	Std. Deviation
+Total	4397	5.551	3.692
+
+
+23) ESRDEN
+Ego send- and receive-network density: Density of the network composed of ego, the set of alters nominated by ego, and the set of alters who nominate ego
+RANGE: 7.60233918128655E-02 to 1
+	N	Mean	Std. Deviation
+Total	4244	0.301	0.144
+
+
+24) NESR
+Size of ego send- and receive-network: Number of alters who are nominated by ego or who nominate ego, plus ego
+RANGE: 1 to 33
+	N	Mean	Std. Deviation
+Total	4397	8.211	4.382
+
+
+25) EHSGRD
+Ego send-network heterogeneity: grade (heterogeneity score)
+RANGE: 0 to 0.82
+	N	Mean	Std. Deviation
+Total	3705	0.225	0.233
+
+
+26) ERSNGRD
+Proportion grade representation in ego send-network
+RANGE: 0.166666666666667 to 1
+	N	Mean	Std. Deviation
+Total	3705	0.445	0.229
+
+
+27) NEHSGRD
+Number of cases used to calculate heterogeneity: EHSGRD
+RANGE: 1 to 11
+	N	Mean	Std. Deviation
+Total	3705	6.244	2.6
+
+
+28) EHRGRD
+Ego receive-network heterogeneity: grade (heterogeneity score)
+RANGE: 0 to 0.775510204081633
+	N	Mean	Std. Deviation
+Total	4020	0.223	0.233
+
+
+29) ERRNGRD
+Proportion grade representation in ego receive-network
+RANGE: 0.166666666666667 to 1
+	N	Mean	Std. Deviation
+Total	4020	0.442	0.227
+
+
+30) NEHRGRD
+Number of cases used to calculate heterogeneity: EHRGRD
+RANGE: 1 to 31
+	N	Mean	Std. Deviation
+Total	4020	5.939	3.567
+
+
+31) EHGRD
+Ego send- and receive-network heterogeneity: grade (heterogeneity score)
+RANGE: 0 to 0.82
+	N	Mean	Std. Deviation
+Total	4244	0.265	0.232
+
+
+32) ERNGRD
+Proportion grade representation in ego send- and receive-network
+RANGE: 0.166666666666667 to 1
+	N	Mean	Std. Deviation
+Total	4244	0.506	0.247
+
+
+33) NEHGRD
+Number of cases used to calculate heterogeneity: EHGRD
+RANGE: 1 to 33
+	N	Mean	Std. Deviation
+Total	4244	8.411	4.22
+
+
+34) EHSRC5
+Ego send-network heterogeneity: race (heterogeneity score)
+RANGE: 0 to 0.78
+	N	Mean	Std. Deviation
+Total	3703	0.235	0.228
+
+
+35) ESRNRC5
+Proportion race representation in ego send-network
+RANGE: 0.2 to 1
+	N	Mean	Std. Deviation
+Total	3703	0.396	0.182
+0.2)	974	26.3
+0.25)	349	9.4
+0.333333333333333)	199	5.4
+0.4)	1099	29.7
+0.5)	313	8.5
+0.6)	435	11.7
+0.666666666666667)	100	2.7
+0.75)	82	2.2
+0.8)	90	2.4
+1)	62	1.7
+Missing	2801
+
+
+36) NEHSRC5
+Number of cases used to calculate heterogeneity: EHSRC5
+RANGE: 1 to 11
+	N	Mean	Std. Deviation
+Total	3703	6.118	2.599
+
+
+37) EHRRC5
+Ego receive-network heterogeneity: race (heterogeneity score)
+RANGE: 0 to 0.775510204081633
+	N	Mean	Std. Deviation
+Total	4017	0.235	0.229
+
+
+38) ERRNRC5
+Proportion race representation in ego receive-network
+RANGE: 0.2 to 1
+	N	Mean	Std. Deviation
+Total	4017	0.393	0.182
+0.2)	1098	27.3
+0.25)	375	9.3
+0.333333333333333)	199	5.0
+0.4)	1212	30.2
+0.5)	349	8.7
+0.6)	425	10.6
+0.666666666666667)	118	2.9
+0.75)	67	1.7
+0.8)	100	2.5
+1)	74	1.8
+Missing	2487
+
+
+39) NEHRRC5
+Number of cases used to calculate heterogeneity: EHRRC5
+RANGE: 1 to 31
+	N	Mean	Std. Deviation
+Total	4017	5.824	3.531
+
+
+40) EHRC5
+Ego send- and receive-network heterogeneity: race (heterogeneity score)
+RANGE: 0 to 0.763888888888889
+	N	Mean	Std. Deviation
+Total	4243	0.265	0.222
+
+
+41) ERNRC5
+Proportion race representation in ego send- and receive-network
+RANGE: 0.2 to 1
+	N	Mean	Std. Deviation
+Total	4243	0.444	0.195
+0.2)	821	19.3
+0.25)	298	7.0
+0.333333333333333)	174	4.1
+0.4)	1294	30.5
+0.5)	389	9.2
+0.6)	676	15.9
+0.666666666666667)	153	3.6
+0.75)	127	3.0
+0.8)	204	4.8
+1)	107	2.5
+Missing	2261
+
+
+42) NEHRC5
+Number of cases used to calculate heterogeneity: EHRC5
+RANGE: 1 to 33
+	N	Mean	Std. Deviation
+Total	4243	8.231	4.187
+
+
+43) EHSAGE
+Ego send-network heterogeneity: age (heterogeneity score)
+RANGE: 0 to 0.814814814814815
+	N	Mean	Std. Deviation
+Total	3705	0.434	0.206
+
+
+44) ERSNAGE
+Proportion age representation in ego send-network
+RANGE: 0.1 to 1
+	N	Mean	Std. Deviation
+Total	3705	0.355	0.152
+
+
+45) NEHSAGE
+Number of cases used to calculate heterogeneity: EHSAGE
+RANGE: 1 to 11
+	N	Mean	Std. Deviation
+Total	3705	6.273	2.609
+
+
+46) EHRAGE
+Ego receive-network heterogeneity: age (heterogeneity score)
+RANGE: 0 to 0.82
+	N	Mean	Std. Deviation
+Total	4020	0.42	0.217
+
+
+47) ERRNAGE
+Proportion age representation in ego receive-network
+RANGE: 0.1 to 1
+	N	Mean	Std. Deviation
+Total	4020	0.343	0.153
+
+
+48) NEHRAGE
+Number of cases used to calculate heterogeneity: EHRAGE
+RANGE: 1 to 31
+	N	Mean	Std. Deviation
+Total	4020	5.962	3.574
+
+
+49) EHAGE
+Ego send- and receive-network heterogeneity: age (heterogeneity score)
+RANGE: 0 to 0.84
+	N	Mean	Std. Deviation
+Total	4244	0.474	0.191
+
+
+50) ERNAGE
+Proportion age representation in ego send- and receive-network
+RANGE: 0.1 to 1
+	N	Mean	Std. Deviation
+Total	4244	0.4	0.165
+
+
+51) NEHAGE
+Number of cases used to calculate heterogeneity: EHAGE
+RANGE: 1 to 33
+	N	Mean	Std. Deviation
+Total	4244	8.446	4.235
+
+
+52) AXSGPA
+Ego send-network alter set mean: GPA
+RANGE: 1 to 4
+	N	Mean	Std. Deviation
+Total	3621	2.873	0.541
+
+
+53) AXSNACT
+Ego send-network alter set mean: NUMACT (number of extracurricular activities reported by the respondent)
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3703	2.49	1.339
+
+
+54) AXSS1
+Ego send-network alter set mean: s1
+RANGE: 11.5 to 19
+	N	Mean	Std. Deviation
+Total	3705	14.854	1.589
+
+
+55) AXSS2
+Ego send-network alter set mean: s2
+RANGE: 0 to 1
+	N	Mean	Std. Deviation
+Total	3704	0.535	0.296
+
+
+56) AXSS3
+Ego send-network alter set mean: s3
+RANGE: 7 to 12
+	N	Mean	Std. Deviation
+Total	3702	9.505	1.594
+
+
+57) AXSS45A
+Ego send-network alter set mean: s45a
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3671	6.638	1.139
+
+
+58) AXSS45B
+Ego send-network alter set mean: s45b
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3675	4.327	1.425
+
+
+59) AXSS45C
+Ego send-network alter set mean: s45c
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3665	1.453	0.953
+
+
+60) AXSS45D
+Ego send-network alter set mean: s45d
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3633	1.04	1.025
+
+
+61) AXSS45E
+Ego send-network alter set mean: s45e
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3621	6.513	1.402
+
+
+62) AXSS45F
+Ego send-network alter set mean: s45f
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3663	5.191	1.333
+
+
+63) AXSS46A
+Ego send-network alter set mean: s46a
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3678	1.195	0.721
+
+
+64) AXSS46B
+Ego send-network alter set mean: s46b
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3677	1.808	0.729
+
+
+65) AXSS46C
+Ego send-network alter set mean: s46c
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3675	1.739	0.768
+
+
+66) AXSS46D
+Ego send-network alter set mean: s46d
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3676	1.532	0.865
+
+
+67) AXSS47
+Ego send-network alter set mean: s47
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3683	2.281	0.708
+
+
+68) AXSS48
+Ego send-network alter set mean: s48
+RANGE: 1 to 4
+	N	Mean	Std. Deviation
+Total	3682	3.256	0.396
+
+
+69) AXSS49
+Ego send-network alter set mean: s49
+RANGE: 1 to 2
+	N	Mean	Std. Deviation
+Total	3680	1.401	0.318
+
+
+70) AXSS50
+Ego send-network alter set mean: s50
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3682	2.052	0.544
+
+
+71) AXSS59A
+Ego send-network alter set mean: s59a
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3670	1.177	1.364
+
+
+72) AXSS59B
+Ego send-network alter set mean: s59b
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3668	1.247	0.998
+
+
+73) AXSS59C
+Ego send-network alter set mean: s59c
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3661	0.711	0.858
+
+
+74) AXSS59D
+Ego send-network alter set mean: s59d
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3666	1.513	1.136
+
+
+75) AXSS59E
+Ego send-network alter set mean: s59e
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3664	0.892	0.873
+
+
+76) AXSS59F
+Ego send-network alter set mean: s59f
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3666	2.152	1.041
+
+
+77) AXSS59G
+Ego send-network alter set mean: s59g
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3668	0.507	0.734
+
+
+78) AXSS60A
+Ego send-network alter set mean: s60a
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3669	1.129	0.527
+
+
+79) AXSS60B
+Ego send-network alter set mean: s60b
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3669	2.539	0.701
+
+
+80) AXSS60C
+Ego send-network alter set mean: s60c
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3667	1.491	0.684
+
+
+81) AXSS60D
+Ego send-network alter set mean: s60d
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3665	0.824	0.574
+
+
+82) AXSS60E
+Ego send-network alter set mean: s60e
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3664	0.581	0.52
+
+
+83) AXSS60F
+Ego send-network alter set mean: s60f
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3661	1.676	0.608
+
+
+84) AXSS60G
+Ego send-network alter set mean: s60g
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3665	1.66	0.661
+
+
+85) AXSS60H
+Ego send-network alter set mean: s60h
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3663	1.187	0.562
+
+
+86) AXSS60I
+Ego send-network alter set mean: s60i
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3664	0.752	0.584
+
+
+87) AXSS60J
+Ego send-network alter set mean: s60j
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3662	1.075	0.68
+
+
+88) AXSS60K
+Ego send-network alter set mean: s60k
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3662	1.21	0.7
+
+
+89) AXSS60L
+Ego send-network alter set mean: s60l
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3660	0.954	0.641
+
+
+90) AXSS60M
+Ego send-network alter set mean: s60m
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3658	1.459	0.696
+
+
+91) AXSS60N
+Ego send-network alter set mean: s60n
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3661	0.779	0.617
+
+
+92) AXSS60O
+Ego send-network alter set mean: s60o
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3661	0.805	0.549
+
+
+93) AXSS62A
+Ego send-network alter set mean: s62a
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3650	4.033	0.532
+
+
+94) AXSS62B
+Ego send-network alter set mean: s62b
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3649	3.714	0.654
+
+
+95) AXSS62C
+Ego send-network alter set mean: s62c
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3646	3.632	0.674
+
+
+96) AXSS62D
+Ego send-network alter set mean: s62d
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3645	3.783	0.622
+
+
+97) AXSS62E
+Ego send-network alter set mean: s62e
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3645	3.717	0.726
+
+
+98) AXSS62F
+Ego send-network alter set mean: s62f
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3635	4.097	0.531
+
+
+99) AXSS62G
+Ego send-network alter set mean: s62g
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3632	3.174	0.745
+
+
+100) AXSS62H
+Ego send-network alter set mean: s62h
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3630	4.199	0.487
+
+
+101) AXSS62I
+Ego send-network alter set mean: s62i
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3633	3.64	0.745
+
+
+102) AXSS62J
+Ego send-network alter set mean: s62j
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3635	3.953	0.592
+
+
+103) AXSS62K
+Ego send-network alter set mean: s62k
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3634	4.193	0.546
+
+
+104) AXSS62L
+Ego send-network alter set mean: s62l
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3636	3.403	0.676
+
+
+105) AXSS62M
+Ego send-network alter set mean: s62m
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3631	3.89	0.637
+
+
+106) AXSS62N
+Ego send-network alter set mean: s62n
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3631	3.314	0.61
+
+
+107) AXSS62O
+Ego send-network alter set mean: s62o
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3628	3.888	0.549
+
+
+108) AXSS62P
+Ego send-network alter set mean: s62p
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3629	4.027	0.556
+
+
+109) AXSS62Q
+Ego send-network alter set mean: s62q
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3631	4.063	0.619
+
+
+110) AXSS62R
+Ego send-network alter set mean: s62r
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3631	3.847	0.655
+
+
+111) AXSS63
+Ego send-network alter set mean: s63
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3641	2.363	0.738
+
+
+112) AXSS64
+Ego send-network alter set mean: s64
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3638	0.729	0.643
+
+
+113) NASGPA
+Ego send-network N of valid alters: axsgpa
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.706	2.601
+
+
+114) NASNACT
+Ego send-network N of valid alters: axsnact
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.231	2.593
+
+
+115) NASS1
+Ego send-network N of valid alters: axss1
+RANGE: 1 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.276	2.607
+1)	312	8.4
+2)	348	9.4
+3)	399	10.8
+4)	470	12.7
+5)	487	13.1
+6)	370	10.0
+7)	428	11.6
+8)	397	10.7
+9)	304	8.2
+10)	190	5.1
+Missing	2799
+
+
+116) NASS2
+Ego send-network N of valid alters: axss2
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.265	2.603
+
+
+117) NASS3
+Ego send-network N of valid alters: axss3
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.251	2.598
+
+
+118) NASS45A
+Ego send-network N of valid alters: axss45a
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.043	2.59
+
+
+119) NASS45B
+Ego send-network N of valid alters: axss45b
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.044	2.589
+
+
+120) NASS45C
+Ego send-network N of valid alters: axss45c
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.964	2.567
+
+
+121) NASS45D
+Ego send-network N of valid alters: axss45d
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.636	2.459
+
+
+122) NASS45E
+Ego send-network N of valid alters: axss45e
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.477	2.4
+
+
+123) NASS45F
+Ego send-network N of valid alters: axss45f
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.953	2.583
+
+
+124) NASS46A
+Ego send-network N of valid alters: axss46a
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.116	2.606
+
+
+125) NASS46B
+Ego send-network N of valid alters: axss46b
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.097	2.601
+
+
+126) NASS46C
+Ego send-network N of valid alters: axss46c
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.102	2.601
+
+
+127) NASS46D
+Ego send-network N of valid alters: axss46d
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.099	2.601
+
+
+128) NASS47
+Ego send-network N of valid alters: axss47
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.138	2.598
+
+
+129) NASS48
+Ego send-network N of valid alters: axss48
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.131	2.602
+
+
+130) NASS49
+Ego send-network N of valid alters: axss49
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.094	2.599
+
+
+131) NASS50
+Ego send-network N of valid alters: axss50
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.121	2.601
+
+
+132) NASS59A
+Ego send-network N of valid alters: axss59a
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.051	2.601
+
+
+133) NASS59B
+Ego send-network N of valid alters: axss59b
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.042	2.6
+
+
+134) NASS59C
+Ego send-network N of valid alters: axss59c
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.018	2.594
+
+
+135) NASS59D
+Ego send-network N of valid alters: axss59d
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.05	2.598
+
+
+136) NASS59E
+Ego send-network N of valid alters: axss59e
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.033	2.597
+
+
+137) NASS59F
+Ego send-network N of valid alters: axss59f
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.029	2.596
+
+
+138) NASS59G
+Ego send-network N of valid alters: axss59g
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.056	2.605
+
+
+139) NASS60A
+Ego send-network N of valid alters: axss60a
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.057	2.605
+
+
+140) NASS60B
+Ego send-network N of valid alters: axss60b
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.055	2.603
+
+
+141) NASS60C
+Ego send-network N of valid alters: axss60c
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.035	2.602
+
+
+142) NASS60D
+Ego send-network N of valid alters: axss60d
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.032	2.6
+
+
+143) NASS60E
+Ego send-network N of valid alters: axss60e
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.008	2.594
+
+
+144) NASS60F
+Ego send-network N of valid alters: axss60f
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5	2.591
+
+
+145) NASS60G
+Ego send-network N of valid alters: axss60g
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.017	2.598
+
+
+146) NASS60H
+Ego send-network N of valid alters: axss60h
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.005	2.597
+
+
+147) NASS60I
+Ego send-network N of valid alters: axss60i
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.006	2.596
+
+
+148) NASS60J
+Ego send-network N of valid alters: axss60j
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.005	2.598
+
+
+149) NASS60K
+Ego send-network N of valid alters: axss60k
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.002	2.599
+
+
+150) NASS60L
+Ego send-network N of valid alters: axss60l
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.987	2.596
+
+
+151) NASS60M
+Ego send-network N of valid alters: axss60m
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.978	2.595
+
+
+152) NASS60N
+Ego send-network N of valid alters: axss60n
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.987	2.598
+
+
+153) NASS60O
+Ego send-network N of valid alters: axss60o
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	5.006	2.602
+
+
+154) NASS62A
+Ego send-network N of valid alters: axss62a
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.929	2.595
+
+
+155) NASS62B
+Ego send-network N of valid alters: axss62b
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.903	2.587
+
+
+156) NASS62C
+Ego send-network N of valid alters: axss62c
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.88	2.58
+
+
+157) NASS62D
+Ego send-network N of valid alters: axss62d
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.889	2.594
+
+
+158) NASS62E
+Ego send-network N of valid alters: axss62e
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.887	2.594
+
+
+159) NASS62F
+Ego send-network N of valid alters: axss62f
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.861	2.596
+
+
+160) NASS62G
+Ego send-network N of valid alters: axss62g
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.816	2.577
+
+
+161) NASS62H
+Ego send-network N of valid alters: axss62h
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.849	2.588
+
+
+162) NASS62I
+Ego send-network N of valid alters: axss62i
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.861	2.593
+
+
+163) NASS62J
+Ego send-network N of valid alters: axss62j
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.858	2.589
+
+
+164) NASS62K
+Ego send-network N of valid alters: axss62k
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.857	2.587
+
+
+165) NASS62L
+Ego send-network N of valid alters: axss62l
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.854	2.588
+
+
+166) NASS62M
+Ego send-network N of valid alters: axss62m
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.845	2.587
+
+
+167) NASS62N
+Ego send-network N of valid alters: axss62n
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.841	2.585
+
+
+168) NASS62O
+Ego send-network N of valid alters: axss62o
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.83	2.59
+
+
+169) NASS62P
+Ego send-network N of valid alters: axss62p
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.844	2.593
+
+
+170) NASS62Q
+Ego send-network N of valid alters: axss62q
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.846	2.588
+
+
+171) NASS62R
+Ego send-network N of valid alters: axss62r
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.848	2.592
+
+
+172) NASS63
+Ego send-network N of valid alters: axss63
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.899	2.603
+
+
+173) NASS64
+Ego send-network N of valid alters: axss64
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	3705	4.895	2.602
+
+
+174) AXRGPA
+Ego receive-network alter set mean: GPA
+RANGE: 1 to 4
+	N	Mean	Std. Deviation
+Total	3908	2.847	0.554
+
+
+175) AXRNACT
+Ego receive-network alter set mean: NUMACT (number of extracurricular activities reported by the respondent)
+RANGE: 0 to 10
+	N	Mean	Std. Deviation
+Total	4013	2.363	1.363
+
+
+176) AXRS1
+Ego receive-network alter set mean: s1
+RANGE: 11 to 19
+	N	Mean	Std. Deviation
+Total	4018	14.774	1.568
+
+
+177) AXRS2
+Ego receive-network alter set mean: s2
+RANGE: 0 to 1
+	N	Mean	Std. Deviation
+Total	4017	0.54	0.336
+
+
+178) AXRS3
+Ego receive-network alter set mean: s3
+RANGE: 7 to 12
+	N	Mean	Std. Deviation
+Total	4014	9.429	1.559
+
+
+179) AXRS45A
+Ego receive-network alter set mean: s45a
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3987	6.677	1.254
+
+
+180) AXRS45B
+Ego receive-network alter set mean: s45b
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3991	4.342	1.536
+
+
+181) AXRS45C
+Ego receive-network alter set mean: s45c
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3979	1.377	0.996
+
+
+182) AXRS45D
+Ego receive-network alter set mean: s45d
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3943	0.955	1.002
+
+
+183) AXRS45E
+Ego receive-network alter set mean: s45e
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3925	6.487	1.541
+
+
+184) AXRS45F
+Ego receive-network alter set mean: s45f
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	3974	5.143	1.453
+
+
+185) AXRS46A
+Ego receive-network alter set mean: s46a
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3997	1.183	0.815
+
+
+186) AXRS46B
+Ego receive-network alter set mean: s46b
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3994	1.762	0.822
+
+
+187) AXRS46C
+Ego receive-network alter set mean: s46c
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3997	1.718	0.846
+
+
+188) AXRS46D
+Ego receive-network alter set mean: s46d
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3993	1.528	0.928
+
+
+189) AXRS47
+Ego receive-network alter set mean: s47
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3992	2.37	0.747
+
+
+190) AXRS48
+Ego receive-network alter set mean: s48
+RANGE: 1 to 4
+	N	Mean	Std. Deviation
+Total	3991	3.296	0.423
+
+
+191) AXRS49
+Ego receive-network alter set mean: s49
+RANGE: 1 to 2
+	N	Mean	Std. Deviation
+Total	3984	1.449	0.337
+
+
+192) AXRS50
+Ego receive-network alter set mean: s50
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3985	2.076	0.581
+
+
+193) AXRS59A
+Ego receive-network alter set mean: s59a
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3980	1.056	1.362
+
+
+194) AXRS59B
+Ego receive-network alter set mean: s59b
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3975	1.104	0.996
+
+
+195) AXRS59C
+Ego receive-network alter set mean: s59c
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3976	0.587	0.821
+
+
+196) AXRS59D
+Ego receive-network alter set mean: s59d
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3977	1.507	1.228
+
+
+197) AXRS59E
+Ego receive-network alter set mean: s59e
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3975	0.799	0.899
+
+
+198) AXRS59F
+Ego receive-network alter set mean: s59f
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3973	2.147	1.131
+
+
+199) AXRS59G
+Ego receive-network alter set mean: s59g
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	3976	0.467	0.76
+
+
+200) AXRS60A
+Ego receive-network alter set mean: s60a
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3974	1.153	0.572
+
+
+201) AXRS60B
+Ego receive-network alter set mean: s60b
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3971	2.528	0.731
+
+
+202) AXRS60C
+Ego receive-network alter set mean: s60c
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3968	1.54	0.786
+
+
+203) AXRS60D
+Ego receive-network alter set mean: s60d
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3965	0.802	0.626
+
+
+204) AXRS60E
+Ego receive-network alter set mean: s60e
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3965	0.577	0.573
+
+
+205) AXRS60F
+Ego receive-network alter set mean: s60f
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3963	1.689	0.685
+
+
+206) AXRS60G
+Ego receive-network alter set mean: s60f
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3962	1.608	0.721
+
+
+207) AXRS60H
+Ego receive-network alter set mean: s60h
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3964	1.179	0.612
+
+
+208) AXRS60I
+Ego receive-network alter set mean: s60i
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3960	0.736	0.641
+
+
+209) AXRS60J
+Ego receive-network alter set mean: s60j
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3961	1.055	0.74
+
+
+210) AXRS60K
+Ego receive-network alter set mean: s60k
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3962	1.169	0.746
+
+
+211) AXRS60L
+Ego receive-network alter set mean: s60l
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3956	0.932	0.688
+
+
+212) AXRS60M
+Ego receive-network alter set mean: s60m
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3953	1.448	0.765
+
+
+213) AXRS60N
+Ego receive-network alter set mean: s60n
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3959	0.751	0.654
+
+
+214) AXRS60O
+Ego receive-network alter set mean: s60o
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3959	0.803	0.604
+
+
+215) AXRS62A
+Ego receive-network alter set mean: s62a
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3950	4.019	0.555
+
+
+216) AXRS62B
+Ego receive-network alter set mean: s62b
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3949	3.688	0.675
+
+
+217) AXRS62C
+Ego receive-network alter set mean: s62c
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3943	3.625	0.727
+
+
+218) AXRS62D
+Ego receive-network alter set mean: s62d
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3943	3.755	0.672
+
+
+219) AXRS62E
+Ego receive-network alter set mean: s62e
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3944	3.705	0.76
+
+
+220) AXRS62F
+Ego receive-network alter set mean: s62f
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3936	4.078	0.566
+
+
+221) AXRS62G
+Ego receive-network alter set mean: s62g
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3928	3.142	0.781
+
+
+222) AXRS62H
+Ego receive-network alter set mean: s62h
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3933	4.203	0.519
+
+
+223) AXRS62I
+Ego receive-network alter set mean: s62i
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3936	3.65	0.795
+
+
+224) AXRS62J
+Ego receive-network alter set mean: s62j
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3938	3.879	0.647
+
+
+225) AXRS62K
+Ego receive-network alter set mean: s62k
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3938	4.185	0.579
+
+
+226) AXRS62L
+Ego receive-network alter set mean: s62l
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3937	3.458	0.731
+
+
+227) AXRS62M
+Ego receive-network alter set mean: s62m
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3928	3.879	0.687
+
+
+228) AXRS62N
+Ego receive-network alter set mean: s62n
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3931	3.351	0.665
+
+
+229) AXRS62O
+Ego receive-network alter set mean: s62o
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3925	3.823	0.613
+
+
+230) AXRS62P
+Ego receive-network alter set mean: s62p
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3931	4.005	0.626
+
+
+231) AXRS62Q
+Ego receive-network alter set mean: s62q
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3929	4.043	0.675
+
+
+232) AXRS62R
+Ego receive-network alter set mean: s62r
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	3929	3.812	0.712
+
+
+233) AXRS63
+Ego receive-network alter set mean: s63
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3932	2.308	0.793
+
+
+234) AXRS64
+Ego receive-network alter set mean: s64
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	3932	0.721	0.688
+
+
+235) NARGPA
+Ego receive-network N of valid alters: axrgpa
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.465	3.42
+
+
+236) NARNACT
+Ego receive-network N of valid alters: axrnact
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.925	3.545
+
+
+237) NARS1
+Ego receive-network N of valid alters: axrs1
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.966	3.573
+
+
+238) NARS2
+Ego receive-network N of valid alters: axrs2
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.954	3.568
+
+
+239) NARS3
+Ego receive-network N of valid alters: axrs3
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.946	3.564
+
+
+240) NARS45A
+Ego receive-network N of valid alters: axrs45a
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.816	3.535
+
+
+241) NARS45B
+Ego receive-network N of valid alters: axrs45b
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.823	3.535
+
+
+242) NARS45C
+Ego receive-network N of valid alters: axrs45c
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.754	3.494
+
+
+243) NARS45D
+Ego receive-network N of valid alters: axrs45d
+RANGE: 0 to 25
+	N	Mean	Std. Deviation
+Total	4020	4.435	3.296
+
+
+244) NARS45E
+Ego receive-network N of valid alters: axrs45e
+RANGE: 0 to 23
+	N	Mean	Std. Deviation
+Total	4020	4.288	3.193
+
+
+245) NARS45F
+Ego receive-network N of valid alters: axrs45f
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.758	3.52
+
+
+246) NARS46A
+Ego receive-network N of valid alters: axrs46a
+RANGE: 0 to 28
+	N	Mean	Std. Deviation
+Total	4020	4.884	3.56
+
+
+247) NARS46B
+Ego receive-network N of valid alters: axrs46b
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.871	3.553
+
+
+248) NARS46C
+Ego receive-network N of valid alters: axrs46c
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.876	3.555
+
+
+249) NARS46D
+Ego receive-network N of valid alters: axrs46d
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.873	3.555
+
+
+250) NARS47
+Ego receive-network N of valid alters: axrs47
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.88	3.563
+
+
+251) NARS48
+Ego receive-network N of valid alters: axrs48
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.879	3.564
+
+
+252) NARS49
+Ego receive-network N of valid alters: axrs49
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.854	3.547
+
+
+253) NARS50
+Ego receive-network N of valid alters: axrs50
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4020	4.867	3.559
+
+
+254) NARS59A
+Ego receive-network N of valid alters: axrs59a
+RANGE: 0 to 28
+	N	Mean	Std. Deviation
+Total	4020	4.818	3.544
+
+
+255) NARS59B
+Ego receive-network N of valid alters: axrs59b
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.811	3.544
+
+
+256) NARS59C
+Ego receive-network N of valid alters: axrs59c
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.785	3.527
+
+
+257) NARS59D
+Ego receive-network N of valid alters: axrs59d
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.813	3.539
+
+
+258) NARS59E
+Ego receive-network N of valid alters: axrs59e
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.8	3.541
+
+
+259) NARS59F
+Ego receive-network N of valid alters: axrs59f
+RANGE: 0 to 28
+	N	Mean	Std. Deviation
+Total	4020	4.786	3.539
+
+
+260) NARS59G
+Ego receive-network N of valid alters: axrs59g
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.812	3.547
+
+
+261) NARS60A
+Ego receive-network N of valid alters: axrs60a
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.807	3.55
+
+
+262) NARS60B
+Ego receive-network N of valid alters: axrs60b
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.8	3.546
+
+
+263) NARS60C
+Ego receive-network N of valid alters: axrs60c
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.786	3.54
+
+
+264) NARS60D
+Ego receive-network N of valid alters: axrs60d
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.783	3.535
+
+
+265) NARS60E
+Ego receive-network N of valid alters: axrs60e
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.755	3.528
+
+
+266) NARS60F
+Ego receive-network N of valid alters: axrs60f
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.755	3.52
+
+
+267) NARS60G
+Ego receive-network N of valid alters: axrs60g
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.764	3.533
+
+
+268) NARS60H
+Ego receive-network N of valid alters: axrs60h
+RANGE: 0 to 28
+	N	Mean	Std. Deviation
+Total	4020	4.755	3.523
+
+
+269) NARS60I
+Ego receive-network N of valid alters: axrs60i
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.75	3.527
+
+
+270) NARS60J
+Ego receive-network N of valid alters: axrs60j
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.753	3.529
+
+
+271) NARS60K
+Ego receive-network N of valid alters: axrs60k
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.753	3.53
+
+
+272) NARS60L
+Ego receive-network N of valid alters: axrs60l
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.744	3.524
+
+
+273) NARS60M
+Ego receive-network N of valid alters: axrs60m
+RANGE: 0 to 28
+	N	Mean	Std. Deviation
+Total	4020	4.733	3.522
+
+
+274) NARS60N
+Ego receive-network N of valid alters: axrs60n
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.744	3.533
+
+
+275) NARS60O
+Ego receive-network N of valid alters: axrs60o
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.757	3.537
+
+
+276) NARS62A
+Ego receive-network N of valid alters: axrs62a
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.683	3.509
+
+
+277) NARS62B
+Ego receive-network N of valid alters: axrs62b
+RANGE: 0 to 28
+	N	Mean	Std. Deviation
+Total	4020	4.662	3.496
+
+
+278) NARS62C
+Ego receive-network N of valid alters: axrs62c
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.636	3.489
+
+
+279) NARS62D
+Ego receive-network N of valid alters: axrs62d
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.645	3.493
+
+
+280) NARS62E
+Ego receive-network N of valid alters: axrs62e
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.634	3.49
+
+
+281) NARS62F
+Ego receive-network N of valid alters: axrs62f
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.616	3.483
+
+
+282) NARS62G
+Ego receive-network N of valid alters: axrs62g
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.577	3.462
+
+
+283) NARS62H
+Ego receive-network N of valid alters: axrs62h
+RANGE: 0 to 28
+	N	Mean	Std. Deviation
+Total	4020	4.6	3.468
+
+
+284) NARS62I
+Ego receive-network N of valid alters: axrs62i
+RANGE: 0 to 28
+	N	Mean	Std. Deviation
+Total	4020	4.614	3.484
+
+
+285) NARS62J
+Ego receive-network N of valid alters: axrs62j
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.616	3.478
+
+
+286) NARS62K
+Ego receive-network N of valid alters: axrs62k
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.609	3.482
+
+
+287) NARS62L
+Ego receive-network N of valid alters: axrs62l
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.607	3.481
+
+
+288) NARS62M
+Ego receive-network N of valid alters: axrs62m
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.595	3.478
+
+
+289) NARS62N
+Ego receive-network N of valid alters: axrs62n
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.594	3.478
+
+
+290) NARS62O
+Ego receive-network N of valid alters: axrs62o
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.583	3.475
+
+
+291) NARS62P
+Ego receive-network N of valid alters: axrs62p
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.597	3.474
+
+
+292) NARS62Q
+Ego receive-network N of valid alters: axrs62q
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.6	3.48
+
+
+293) NARS62R
+Ego receive-network N of valid alters: axrs62r
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.602	3.482
+
+
+294) NARS63
+Ego receive-network N of valid alters: axrs63
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.632	3.501
+
+
+295) NARS64
+Ego receive-network N of valid alters: axrs64
+RANGE: 0 to 29
+	N	Mean	Std. Deviation
+Total	4020	4.626	3.5
+
+
+296) AXGPA
+Ego send- and receive-network alter set mean: GPA
+RANGE: 1 to 4
+	N	Mean	Std. Deviation
+Total	4190	2.847	0.5
+
+
+297) AXNUMACT
+Ego send- and receive-network alter set mean: NUMACT (number of extracurricular activities reported by the respondent)
+RANGE: 0 to 9
+	N	Mean	Std. Deviation
+Total	4241	2.406	1.202
+
+
+298) AXS1
+Ego send- and receive-network alter set mean: s1
+RANGE: 11.6 to 19
+	N	Mean	Std. Deviation
+Total	4243	14.829	1.548
+
+
+299) AXS2
+Ego send- and receive-network alter set mean: s2
+RANGE: 0 to 1
+	N	Mean	Std. Deviation
+Total	4244	0.527	0.269
+
+
+300) AXS3
+Ego send- and receive-network alter set mean: s3
+RANGE: 7 to 12
+	N	Mean	Std. Deviation
+Total	4244	9.473	1.551
+
+
+301) AXS45A
+Ego send- and receive-network alter set mean: s45a
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	4230	6.639	1.039
+
+
+302) AXS45B
+Ego send- and receive-network alter set mean: s45b
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	4233	4.317	1.281
+
+
+303) AXS45C
+Ego send- and receive-network alter set mean: s45c
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	4229	1.411	0.823
+
+
+304) AXS45D
+Ego send- and receive-network alter set mean: s45d
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	4208	0.995	0.843
+
+
+305) AXS45E
+Ego send- and receive-network alter set mean: s45e
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	4198	6.48	1.297
+
+
+306) AXS45F
+Ego send- and receive-network alter set mean: s45f
+RANGE: 0 to 8
+	N	Mean	Std. Deviation
+Total	4226	5.138	1.191
+
+
+307) AXS46A
+Ego send- and receive-network alter set mean: s46a
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4234	1.206	0.671
+
+
+308) AXS46B
+Ego send- and receive-network alter set mean: s46b
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4233	1.793	0.67
+
+
+309) AXS46C
+Ego send- and receive-network alter set mean: s46c
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4234	1.745	0.694
+
+
+310) AXS46D
+Ego send- and receive-network alter set mean: s46d
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4231	1.547	0.785
+
+
+311) AXS47
+Ego send- and receive-network alter set mean: s47
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4231	2.342	0.652
+
+
+312) AXS48
+Ego send- and receive-network alter set mean: s48
+RANGE: 1.66666666666667 to 4
+	N	Mean	Std. Deviation
+Total	4231	3.277	0.357
+
+
+313) AXS49
+Ego send- and receive-network alter set mean: s49
+RANGE: 1 to 2
+	N	Mean	Std. Deviation
+Total	4227	1.425	0.291
+
+
+314) AXS50
+Ego send- and receive-network alter set mean: s50
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4228	2.062	0.478
+
+
+315) AXS59A
+Ego send- and receive-network alter set mean: s59a
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	4224	1.114	1.23
+
+
+316) AXS59B
+Ego send- and receive-network alter set mean: s59b
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	4221	1.182	0.896
+
+
+317) AXS59C
+Ego send- and receive-network alter set mean: s59c
+RANGE: 0 to 5
+	N	Mean	Std. Deviation
+Total	4217	0.657	0.752
+
+
+318) AXS59D
+Ego send- and receive-network alter set mean: s59d
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	4220	1.535	1.054
+
+
+319) AXS59E
+Ego send- and receive-network alter set mean: s59e
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	4220	0.843	0.746
+
+
+320) AXS59F
+Ego send- and receive-network alter set mean: s59f
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	4219	2.149	0.93
+
+
+321) AXS59G
+Ego send- and receive-network alter set mean: s59g
+RANGE: 0 to 6
+	N	Mean	Std. Deviation
+Total	4221	0.497	0.666
+
+
+322) AXS60A
+Ego send- and receive-network alter set mean: s60a
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4219	1.14	0.473
+
+
+323) AXS60B
+Ego send- and receive-network alter set mean: s60b
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4217	2.53	0.622
+
+
+324) AXS60C
+Ego send- and receive-network alter set mean: s60c
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4215	1.503	0.633
+
+
+325) AXS60D
+Ego send- and receive-network alter set mean: s60d
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4216	0.814	0.517
+
+
+326) AXS60E
+Ego send- and receive-network alter set mean: s60e
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4215	0.578	0.466
+
+
+327) AXS60F
+Ego send- and receive-network alter set mean: s60f
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4214	1.676	0.561
+
+
+328) AXS60G
+Ego send- and receive-network alter set mean: s60g
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4214	1.627	0.6
+
+
+329) AXS60H
+Ego send- and receive-network alter set mean: s60h
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4212	1.177	0.501
+
+
+330) AXS60I
+Ego send- and receive-network alter set mean: s60i
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4214	0.736	0.517
+
+
+331) AXS60J
+Ego send- and receive-network alter set mean: s60j
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4212	1.059	0.605
+
+
+332) AXS60K
+Ego send- and receive-network alter set mean: s60k
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4213	1.184	0.632
+
+
+333) AXS60L
+Ego send- and receive-network alter set mean: s60l
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4210	0.937	0.571
+
+
+334) AXS60M
+Ego send- and receive-network alter set mean: s60m
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4209	1.446	0.624
+
+
+335) AXS60N
+Ego send- and receive-network alter set mean: s60n
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4210	0.753	0.537
+
+
+336) AXS60O
+Ego send- and receive-network alter set mean: s60o
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4211	0.797	0.498
+
+
+337) AXS62A
+Ego send- and receive-network alter set mean: s62a
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4208	4.029	0.474
+
+
+338) AXS62B
+Ego send- and receive-network alter set mean: s62b
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4209	3.684	0.589
+
+
+339) AXS62C
+Ego send- and receive-network alter set mean: s62c
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4204	3.629	0.607
+
+
+340) AXS62D
+Ego send- and receive-network alter set mean: s62d
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4205	3.77	0.558
+
+
+341) AXS62E
+Ego send- and receive-network alter set mean: s62e
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4206	3.705	0.66
+
+
+342) AXS62F
+Ego send- and receive-network alter set mean: s62f
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4200	4.092	0.476
+
+
+343) AXS62G
+Ego send- and receive-network alter set mean: s62g
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4195	3.153	0.69
+
+
+344) AXS62H
+Ego send- and receive-network alter set mean: s62h
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4194	4.202	0.442
+
+
+345) AXS62I
+Ego send- and receive-network alter set mean: s62i
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4197	3.643	0.685
+
+
+346) AXS62J
+Ego send- and receive-network alter set mean: s62j
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4198	3.918	0.542
+
+
+347) AXS62K
+Ego send- and receive-network alter set mean: s62k
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4198	4.181	0.498
+
+
+348) AXS62L
+Ego send- and receive-network alter set mean: s62l
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4201	3.433	0.616
+
+
+349) AXS62M
+Ego send- and receive-network alter set mean: s62m
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4195	3.893	0.575
+
+
+350) AXS62N
+Ego send- and receive-network alter set mean: s62n
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4195	3.339	0.554
+
+
+351) AXS62O
+Ego send- and receive-network alter set mean: s62o
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4191	3.854	0.511
+
+
+352) AXS62P
+Ego send- and receive-network alter set mean: s62p
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4192	4.01	0.518
+
+
+353) AXS62Q
+Ego send- and receive-network alter set mean: s62q
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4193	4.04	0.578
+
+
+354) AXS62R
+Ego send- and receive-network alter set mean: s62r
+RANGE: 1 to 5
+	N	Mean	Std. Deviation
+Total	4193	3.819	0.616
+
+
+355) AXS63
+Ego send- and receive-network alter set mean: s63
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4199	2.337	0.676
+
+
+356) AXS64
+Ego send- and receive-network alter set mean: s64
+RANGE: 0 to 4
+	N	Mean	Std. Deviation
+Total	4198	0.74	0.581
+
+
+357) NAGPA
+Ego send- and receive-network N of valid alters: axgpa
+RANGE: 0 to 32
+	N	Mean	Std. Deviation
+Total	4244	6.651	4.113
+
+
+358) NANUMACT
+Ego send- and receive-network N of valid alters: axnumact
+RANGE: 0 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.386	4.199
+
+
+359) NAS1
+Ego send- and receive-network N of valid alters: axs1
+RANGE: 0 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.45	4.234
+
+
+360) NAS2
+Ego send- and receive-network N of valid alters: axs2
+RANGE: 1 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.433	4.225
+
+
+361) NAS3
+Ego send- and receive-network N of valid alters: axs3
+RANGE: 1 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.418	4.218
+
+
+362) NAS45A
+Ego send- and receive-network N of valid alters: axs45a
+RANGE: 0 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.151	4.182
+
+
+363) NAS45B
+Ego send- and receive-network N of valid alters: axs45b
+RANGE: 0 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.156	4.179
+
+
+364) NAS45C
+Ego send- and receive-network N of valid alters: axs45c
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.048	4.126
+
+
+365) NAS45D
+Ego send- and receive-network N of valid alters: axs45d
+RANGE: 0 to 26
+	N	Mean	Std. Deviation
+Total	4244	6.585	3.903
+
+
+366) NAS45E
+Ego send- and receive-network N of valid alters: axs45e
+RANGE: 0 to 23
+	N	Mean	Std. Deviation
+Total	4244	6.362	3.789
+
+
+367) NAS45F
+Ego send- and receive-network N of valid alters: axs45f
+RANGE: 0 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.037	4.15
+
+
+368) NAS46A
+Ego send- and receive-network N of valid alters: axs46a
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4244	7.255	4.214
+
+
+369) NAS46B
+Ego send- and receive-network N of valid alters: axs46b
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.231	4.209
+
+
+370) NAS46C
+Ego send- and receive-network N of valid alters: axs46c
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.238	4.209
+
+
+371) NAS46D
+Ego send- and receive-network N of valid alters: axs46d
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.234	4.208
+
+
+372) NAS47
+Ego send- and receive-network N of valid alters: axs47
+RANGE: 0 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.275	4.217
+
+
+373) NAS48
+Ego send- and receive-network N of valid alters: axs48
+RANGE: 0 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.268	4.219
+
+
+374) NAS49
+Ego send- and receive-network N of valid alters: axs49
+RANGE: 0 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.22	4.199
+
+
+375) NAS50
+Ego send- and receive-network N of valid alters: axs50
+RANGE: 0 to 32
+	N	Mean	Std. Deviation
+Total	4244	7.252	4.212
+
+
+376) NAS59A
+Ego send- and receive-network N of valid alters: axs59a
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4244	7.16	4.196
+
+
+377) NAS59B
+Ego send- and receive-network N of valid alters: axs59b
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.147	4.198
+
+
+378) NAS59C
+Ego send- and receive-network N of valid alters: axs59c
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4244	7.114	4.176
+
+
+379) NAS59D
+Ego send- and receive-network N of valid alters: axs59d
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.157	4.192
+
+
+380) NAS59E
+Ego send- and receive-network N of valid alters: axs59e
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.135	4.19
+
+
+381) NAS59F
+Ego send- and receive-network N of valid alters: axs59f
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4244	7.12	4.189
+
+
+382) NAS59G
+Ego send- and receive-network N of valid alters: axs59g
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.159	4.202
+
+
+383) NAS60A
+Ego send- and receive-network N of valid alters: axs60a
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.158	4.208
+
+
+384) NAS60B
+Ego send- and receive-network N of valid alters: axs60b
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.151	4.204
+
+
+385) NAS60C
+Ego send- and receive-network N of valid alters: axs60c
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.124	4.199
+
+
+386) NAS60D
+Ego send- and receive-network N of valid alters: axs60d
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.121	4.195
+
+
+387) NAS60E
+Ego send- and receive-network N of valid alters: axs60e
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.084	4.183
+
+
+388) NAS60F
+Ego send- and receive-network N of valid alters: axs60f
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.08	4.18
+
+
+389) NAS60G
+Ego send- and receive-network N of valid alters: axs60g
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.096	4.193
+
+
+390) NAS60H
+Ego send- and receive-network N of valid alters: axs60h
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4244	7.079	4.188
+
+
+391) NAS60I
+Ego send- and receive-network N of valid alters: axs60i
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.074	4.189
+
+
+392) NAS60J
+Ego send- and receive-network N of valid alters: axs60j
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.077	4.19
+
+
+393) NAS60K
+Ego send- and receive-network N of valid alters: axs60k
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.075	4.19
+
+
+394) NAS60L
+Ego send- and receive-network N of valid alters: axs60l
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.058	4.184
+
+
+395) NAS60M
+Ego send- and receive-network N of valid alters: axs60m
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4244	7.043	4.182
+
+
+396) NAS60N
+Ego send- and receive-network N of valid alters: axs60n
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.056	4.193
+
+
+397) NAS60O
+Ego send- and receive-network N of valid alters: axs60o
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	7.08	4.2
+
+
+398) NAS62A
+Ego send- and receive-network N of valid alters: axs62a
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.964	4.164
+
+
+399) NAS62B
+Ego send- and receive-network N of valid alters: axs62b
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4244	6.931	4.15
+
+
+400) NAS62C
+Ego send- and receive-network N of valid alters: axs62c
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.895	4.141
+
+
+401) NAS62D
+Ego send- and receive-network N of valid alters: axs62d
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.903	4.153
+
+
+402) NAS62E
+Ego send- and receive-network N of valid alters: axs62e
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.896	4.148
+
+
+403) NAS62F
+Ego send- and receive-network N of valid alters: axs62f
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.865	4.145
+
+
+404) NAS62G
+Ego send- and receive-network N of valid alters: axs62g
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.797	4.118
+
+
+405) NAS62H
+Ego send- and receive-network N of valid alters: axs62h
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4244	6.841	4.131
+
+
+406) NAS62I
+Ego send- and receive-network N of valid alters: axs62i
+RANGE: 0 to 30
+	N	Mean	Std. Deviation
+Total	4244	6.86	4.143
+
+
+407) NAS62J
+Ego send- and receive-network N of valid alters: axs62j
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.858	4.138
+
+
+408) NAS62K
+Ego send- and receive-network N of valid alters: axs62k
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.853	4.139
+
+
+409) NAS62L
+Ego send- and receive-network N of valid alters: axs62l
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.849	4.139
+
+
+410) NAS62M
+Ego send- and receive-network N of valid alters: axs62m
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.835	4.137
+
+
+411) NAS62N
+Ego send- and receive-network N of valid alters: axs62n
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.829	4.132
+
+
+412) NAS62O
+Ego send- and receive-network N of valid alters: axs62o
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.813	4.132
+
+
+413) NAS62P
+Ego send- and receive-network N of valid alters: axs62p
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.833	4.137
+
+
+414) NAS62Q
+Ego send- and receive-network N of valid alters: axs62q
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.837	4.136
+
+
+415) NAS62R
+Ego send- and receive-network N of valid alters: axs62r
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.84	4.14
+
+
+416) NAS63
+Ego send- and receive-network N of valid alters: axs63
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.905	4.161
+
+
+417) NAS64
+Ego send- and receive-network N of valid alters: axs64
+RANGE: 0 to 31
+	N	Mean	Std. Deviation
+Total	4244	6.897	4.16
+
+
+418) DENX2
+Density: The number of actual ties in the total friendship network divided by the number of possible ties in the total friendship network
+RANGE: 1.15765031371968E-03 to 0.346666666666667
+	N	Mean	Std. Deviation
+Total	4397	0.014	0.024
+
+
+419) RCHDEN
+Density at maximum reach: The proportion of all ties filled when reach maximized
+RANGE: 0.163023861326105 to 0.96
+	N	Mean	Std. Deviation
+Total	4397	0.706	0.151
+
+
+420) RELDEN
+Relative density: Observed density divided by maximum possible density given out-degree=10
+RANGE: 0.19549356223176 to 0.832
+	N	Mean	Std. Deviation
+Total	4397	0.442	0.099
+
+
+421) PCTMUT
+Proportion symmetric dyads: Proportion of all dyads that are symmetric
+RANGE: 4.02351662467269E-04 to 0.193333333333333
+	N	Mean	Std. Deviation
+Total	4397	0.006	0.012
+
+
+422) PCTASY
+Proportion asymmetric dyads: Proportion of all dyads that are asymmetric
+RANGE: 1.51059730250482E-03 to 0.306666666666667
+	N	Mean	Std. Deviation
+Total	4397	0.016	0.023
+
+
+423) RHO2
+Mutuality index: Katz and Powell's (1955) mutuality index. Measures the tendency for actors in a group to reciprocate choices. The index is based on the expected number of mutual dyads given a random network with the same distribution of out-ties as that observed in the data.
+RANGE: 0.231413914816647 to 0.528595006456431
+	N	Mean	Std. Deviation
+Total	4397	0.382	0.049
+
+
+424) SEG1S3
+Freeman Segregation Index: Grade
+RANGE: 0.411329256517541 to 0.939617190670351
+	N	Mean	Std. Deviation
+Total	4397	0.691	0.115
+
+
+425) SS37
+Saliency Index: Grade=7
+RANGE: 1.2757153608675 to 16.1942348080962
+	N	Mean	Std. Deviation
+Total	2148	3.849	3.33
+
+
+426) SS38
+Saliency Index: Grade=8
+RANGE: 1.33595691797846 to 26.7682648401826
+	N	Mean	Std. Deviation
+Total	2221	4.357	5.29
+
+
+427) SS39
+Saliency Index: Grade=9
+RANGE: 1.8702622965307 to 5.24203821656051
+	N	Mean	Std. Deviation
+Total	3263	3.081	0.784
+
+
+428) SS310
+Saliency Index: Grade=10
+RANGE: 1.7661040886943 to 5.17265662943176
+	N	Mean	Std. Deviation
+Total	3294	3.052	0.9
+
+
+429) SS311
+Saliency Index: Grade=11
+RANGE: 1.97336448598131 to 6.60606060606061
+	N	Mean	Std. Deviation
+Total	3294	3.395	0.959
+
+
+430) SS312
+Saliency Index: Grade=12
+RANGE: 2.56955420160463 to 11.09375
+	N	Mean	Std. Deviation
+Total	3294	4.307	1.413
+
+
+431) SEG1RCE5
+Freeman Segregation Index: Race
+RANGE: -1.48448454550998E-02 to 0.75303615644442
+	N	Mean	Std. Deviation
+Total	4397	0.258	0.186
+
+
+432) SRCE51
+Saliency Index: Race=White
+RANGE: 0.991893227879387 to 15.4918524871355
+	N	Mean	Std. Deviation
+Total	4164	2.022	2.488
+
+
+433) SRCE52
+Saliency Index: Race=Black
+RANGE: 0.706766917293233 to 20.7257142857143
+	N	Mean	Std. Deviation
+Total	2749	4.195	3.402
+
+
+434) SRCE53
+Saliency Index: Race=Hispanic
+RANGE: 0 to 11.4262626262626
+	N	Mean	Std. Deviation
+Total	2766	2.067	1.929
+
+
+435) SRCE54
+Saliency Index: Race=Asian
+RANGE: 0 to 12.6493448811903
+	N	Mean	Std. Deviation
+Total	1570	4.39	2.958
+
+
+436) SRCE55
+Saliency Index: Race=Other
+RANGE: 0 to 2.759765625
+	N	Mean	Std. Deviation
+Total	4397	1.208	0.446
+
+
+437) SEG1S2
+Freeman Segregation Index: Sex
+RANGE: 7.38417964798706E-02 to 0.402220182820285
+	N	Mean	Std. Deviation
+Total	4369	0.188	0.063
+
+
+438) SS20
+Saliency Index: Gender=Male
+RANGE: 0.973905325443787 to 1.46539556766126
+	N	Mean	Std. Deviation
+Total	4369	1.16	0.092
+
+
+439) SS21
+Saliency Index: Gender=Female
+RANGE: 0.942016806722689 to 1.89677419354839
+	N	Mean	Std. Deviation
+Total	4369	1.222	0.113
+
+
