@@ -1,0 +1,81 @@
+---
+title: "Andy's Modeling Updates"
+author: "Andy Shen"
+date: "`r Sys.Date()`"
+header-includes:
+  - \usepackage{booktabs}
+output: 
+  beamer_presentation:
+    theme: "Warsaw"
+    colortheme: "dolphin"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE,
+                      fig.align = "center")
+library(tidyverse)
+library(kableExtra)
+```
+
+```{r}
+# reading in data and recoding it
+df_first_study <- read_csv("../processed-data/intox_sex_file.csv")
+
+df_first_study$sex <- as.character(df_first_study$sex)
+
+df_first_study$intoxication <- factor(df_first_study$intoxication)
+df_first_study$intoxication <- relevel(df_first_study$intoxication, ref = "never")
+
+df_first_study$intercourse_dummy <- factor(df_first_study$intercourse_dummy)
+
+# creating dummy varaibles for intoxication in case we need it later.
+df_1st_logistic <- df_first_study %>% 
+  dplyr::mutate(
+    never_intox = ifelse(intoxication == "never", 1, 0),
+    occasion_intox = ifelse(intoxication == "occasionally", 1, 0),
+    frequently_intox = ifelse(intoxication == "frequently", 1, 0)
+  )
+```
+
+
+```{r, eval=TRUE}
+# running inividual logistic regressions
+tassoc_1st <- glm(intercourse_dummy ~ intoxication, 
+                  data = df_1st_logistic, 
+                  family = "binomial")
+# summary(tassoc_1st)
+odds_ratio_mf <- exp(tassoc_1st$coefficients)
+
+tassoc_male_1st <- glm(intercourse_dummy ~ intoxication, 
+                  data = df_1st_logistic %>% dplyr::filter(sex == 1), 
+                  family = "binomial")
+# summary(tassoc_male_1st)
+odds_ratio_m <- exp(tassoc_male_1st$coefficients)
+
+tassoc_female_1st <- glm(intercourse_dummy ~ intoxication, 
+                  data = df_1st_logistic %>% dplyr::filter(sex == 2), 
+                  family = "binomial")
+# summary(tassoc_female_1st)
+odds_ratio_f <- exp(tassoc_female_1st$coefficients)
+```
+
+
+```{r}
+df_1st_OR <- data.frame(
+  all_gender = odds_ratio_mf[-1],
+  male = odds_ratio_m[-1],
+  female = odds_ratio_f[-1] # do not need intercept
+) %>% t() %>% data.frame() %>% tibble()
+rownames(df_1st_OR) <- c("all_gender", "male", "female")
+names(df_1st_OR) <- c("Occasionally", "Frequently")
+df_1st_OR %>% 
+  rownames_to_column("Gender") %>% 
+  kable(format = "latex", booktabs = TRUE, digits = 1,
+        caption = "Total association logistic regression odds ratios (Andy).") %>% 
+  kableExtra::kable_styling(font_size = 7) 
+```
+
+
+
