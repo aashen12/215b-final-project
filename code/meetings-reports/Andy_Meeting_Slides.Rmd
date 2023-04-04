@@ -20,6 +20,7 @@ library(tidyverse)
 library(kableExtra)
 library(htmltools)
 library(xtable)
+library(nnet)
 ```
 
 
@@ -61,13 +62,19 @@ df_first_study$intoxication <- relevel(df_first_study$intoxication, ref = "never
 
 df_first_study$intercourse_dummy <- factor(df_first_study$intercourse_dummy)
 
-# creating dummy varaibles for intoxication in case we need it later.
-df_1st_logistic <- df_first_study %>% 
-  dplyr::mutate(
-    never_intox = ifelse(intoxication == "never", 1, 0),
-    occasion_intox = ifelse(intoxication == "occasionally", 1, 0),
-    frequently_intox = ifelse(intoxication == "frequently", 1, 0)
-  )
+df_first_study$intox_most_recent_sex <- factor(df_first_study$intox_most_recent_sex)
+df_first_study$intox_most_recent_sex <- relevel(df_first_study$intox_most_recent_sex, ref = "never")
+
+
+df_1st_logistic <- df_first_study
+
+# creating dummy variables for intoxication in case we need it later.
+# df_1st_logistic <- df_first_study %>% 
+#   dplyr::mutate(
+#     never_intox = ifelse(intoxication == "never", 1, 0),
+#     occasion_intox = ifelse(intoxication == "occasionally", 1, 0),
+#     frequently_intox = ifelse(intoxication == "frequently", 1, 0)
+#   )
 ```
 
 
@@ -77,19 +84,19 @@ tassoc_1st <- glm(intercourse_dummy ~ intoxication,
                   data = df_1st_logistic, 
                   family = "binomial")
 # summary(tassoc_1st)
-odds_ratio_mf <- exp(tassoc_1st$coefficients)
+odds_ratio_mf <- exp(tassoc_1st$coefficients) %>% log()
 
 tassoc_male_1st <- glm(intercourse_dummy ~ intoxication, 
                   data = df_1st_logistic %>% dplyr::filter(sex == 1), 
                   family = "binomial")
 # summary(tassoc_male_1st)
-odds_ratio_m <- exp(tassoc_male_1st$coefficients)
+odds_ratio_m <- exp(tassoc_male_1st$coefficients) %>% log()
 
 tassoc_female_1st <- glm(intercourse_dummy ~ intoxication, 
                   data = df_1st_logistic %>% dplyr::filter(sex == 2), 
                   family = "binomial")
 # summary(tassoc_female_1st)
-odds_ratio_f <- exp(tassoc_female_1st$coefficients)
+odds_ratio_f <- exp(tassoc_female_1st$coefficients) %>% log()
 ```
 
 # Replicating Felson Study 1: Effect of intoxication on sexual intercourse
@@ -105,6 +112,7 @@ odds_ratio_f <- exp(tassoc_female_1st$coefficients)
 ## Total Association with logistic regression
 
 ```{r}
+# inputting our numbers into a table for display
 df_1st_OR <- data.frame(
   all_gender = odds_ratio_mf[-1] %>% rev(),
   male = odds_ratio_m[-1] %>% rev(),
@@ -112,6 +120,7 @@ df_1st_OR <- data.frame(
 ) %>% t() %>% data.frame() %>% tibble()
 rownames(df_1st_OR) <- c("all_gender", "male", "female")
 names(df_1st_OR) <- c("Occasionally", "Frequently")
+
 df_1st_OR_kbl <- df_1st_OR %>% 
   rownames_to_column("Gender") %>% 
   dplyr::mutate(OR_diff = abs(Occasionally - Frequently)) %>% 
@@ -122,6 +131,7 @@ df_1st_OR_kbl
 ```
 
 ```{r}
+# inputting felson's numbers
 df_1st_Felson <- data.frame(
   all_gender = c(3.98, 8.48),
   male = c(3.57, 8.69),
@@ -129,6 +139,8 @@ df_1st_Felson <- data.frame(
 ) %>% t() %>% data.frame() %>% tibble()
 rownames(df_1st_Felson) <- c("all_gender", "male", "female")
 names(df_1st_Felson) <- c("Occasionally", "Frequently")
+
+# display purposes
 df_1st_Felson_kbl <- df_1st_Felson %>% 
   rownames_to_column("Gender") %>% 
   dplyr::mutate(OR_diff = abs(Occasionally - Frequently)) %>% 
@@ -138,7 +150,33 @@ df_1st_Felson_kbl <- df_1st_Felson %>%
 df_1st_Felson_kbl
 ```
 
+## Takeaways
+
+- Let's assume this subsample is representative of the larger sample used in the paper
+
+- In this case, our analysis has "closed the gap" in terms of odds ratios
+
+- Perhaps the tendency to have sex isn't *that* drastic for occasional vs frequent drinkers?
+
+- How does this relate to spuriousness?
+
 
 ## Spurious effect using multinomial logistic regression
+
+```{r}
+spurious_assoc_1st <- nnet::multinom(intox_most_recent_sex ~ intoxication,
+                                     data = df_1st_logistic)
+summary(spurious_assoc_1st)
+```
+
+
+## Issues with situational decomposition
+
+- What happens when there is above 100% spuriousness?
+
+
+
+
+
 
 

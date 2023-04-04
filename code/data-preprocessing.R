@@ -68,18 +68,43 @@ df <- apply(df_raw, 2, coerceResponse) %>% data.frame() %>% tibble()
 
 
 intox_freq_code <- "H1TO18"
- # 
+# Frequency of intoxication was measured by asking participants 
+#   how often they had gotten drunk in the past 12 months.
+#   1: every day or almost every day
+#   2: 3-5 days a week
+#   3: 1-2 days a week
+#   4: 2-3 days a month
+#   5: once a month
+#   6: 1-2 days in the past 12 months
+#   7: never
 sex_intercourse_code <- "H1CO1"
  # 0: no
  # 1: yes
 
+sex_drink_subcode <- 3
+
+drunk_most_recent_sex <- paste0("H1JO", sex_drink_subcode)
+# H1JO1: did you drink during your first time?
+# H1JO2: were you drunk during your first time?
+# H1JO3: did you drink during your last sexual encounter?
+#   (I think Felson used this for the first study multinom. logisic regression)
+#.  0: no --> sober
+#.  1: yes --> intoxicated
+#.  2: You have had sexual intercourse only once. --> sober
+#.  NA: count as 0 --> never
+# H1JO4: were you drunk during your last sexual encounter?
+#.  0: no --> sober
+#.  1: yes --> intoxicated
+#.  NA: legitimate skip --> never
 
 df_first_study <- df %>% 
-  dplyr::select(AID, BIO_SEX, all_of(c(intox_freq_code, sex_intercourse_code))) %>% 
+  dplyr::select(AID, BIO_SEX, all_of(c(intox_freq_code, sex_intercourse_code, drunk_most_recent_sex))) %>% 
   dplyr::rename(sex = BIO_SEX,
                 intoxication = H1TO18,
-                intercourse_dummy = H1CO1) %>%  
-  dplyr::mutate_at(.vars = c("sex", "intoxication", "intercourse_dummy"), factor) #%>% na.omit()
+                intercourse_dummy = H1CO1,
+                intox_most_recent_sex = paste0("H1JO", sex_drink_subcode)) %>%  
+  dplyr::mutate_at(.vars = c("sex", "intoxication", "intercourse_dummy", "intox_most_recent_sex"), 
+                   factor)
 # converts categorical columns to factors
 # remove NA's
 
@@ -87,11 +112,34 @@ df_first_study$intoxication <- ifelse(
   df_first_study$intoxication %in% c(1, 2, 3),
   "frequently", # frequently
   ifelse(
-    df_first_study$intoxication %in% c(4, 5),
+    df_first_study$intoxication %in% c(4, 5, 6),
     "occasionally", # occasionally
     "never" # never. NA included in this group
   )
 ) %>% factor() 
+
+if (sex_drink_subcode == 3) {
+  df_first_study$intox_most_recent_sex <- ifelse(
+    df_first_study$intox_most_recent_sex %in% c(0),
+    "sober",
+    ifelse(
+      df_first_study$intox_most_recent_sex %in% c(1),
+      "intoxicated",
+      "never" # NA included
+    )
+  ) %>% factor()
+} else if (sex_drink_subcode == 4) {
+  df_first_study$intox_most_recent_sex <- ifelse(
+    df_first_study$intox_most_recent_sex %in% c(0),
+    "sober",
+    ifelse(
+      df_first_study$intox_most_recent_sex %in% c(1),
+      "intoxicated",
+      "never" # NA included
+    )
+  ) %>% factor()
+}
+
 # recoding the data as done by felson 2020
 # Felson 2020 do not provide a way to account for missing data. We treat them as nevers here. 
 #  This is a judgment call that is subject to change.
@@ -103,6 +151,9 @@ if (!dir.exists(dir_name)) {
 }
 
 write_csv(df_first_study, paste0(dir_name, "/intox_sex_file.csv"))
+
+
+
 
 ############################################################################
 ############################################################################
