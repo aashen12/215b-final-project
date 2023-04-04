@@ -7,7 +7,8 @@ header-includes:
 output: 
   beamer_presentation:
     theme: "Warsaw"
-    colortheme: "dolphin"
+    colortheme: "seahorse"
+    slide_level: 2
 ---
 
 ```{r setup, include=FALSE}
@@ -17,7 +18,23 @@ knitr::opts_chunk$set(echo = FALSE,
                       fig.align = "center")
 library(tidyverse)
 library(kableExtra)
+library(htmltools)
+library(xtable)
 ```
+
+## Agenda 4/6/2023
+
+- Discuss data pre-processing script
+
+- Andy's updates on modeling
+
+- "Evaluating situational decomposition" qualms
+
+- Discuss structure of report
+
+## Data pre-processing
+
+- There is an R script in the `andy-eda`
 
 ```{r}
 # reading in data and recoding it
@@ -64,18 +81,35 @@ odds_ratio_f <- exp(tassoc_female_1st$coefficients)
 
 ```{r}
 df_1st_OR <- data.frame(
-  all_gender = odds_ratio_mf[-1],
-  male = odds_ratio_m[-1],
-  female = odds_ratio_f[-1] # do not need intercept
+  all_gender = odds_ratio_mf[-1] %>% rev(),
+  male = odds_ratio_m[-1] %>% rev(),
+  female = odds_ratio_f[-1] %>% rev() # do not need intercept coef
 ) %>% t() %>% data.frame() %>% tibble()
 rownames(df_1st_OR) <- c("all_gender", "male", "female")
 names(df_1st_OR) <- c("Occasionally", "Frequently")
-df_1st_OR %>% 
-  rownames_to_column("Gender") %>% 
-  kable(format = "latex", booktabs = TRUE, digits = 1,
-        caption = "Total association logistic regression odds ratios (Andy).") %>% 
-  kableExtra::kable_styling(font_size = 7) 
+df_1st_OR_kbl <- df_1st_OR %>% rownames_to_column("Gender") %>% 
+kable(format = "latex", booktabs = TRUE, digits = 1,
+      caption = "Total association logistic regression odds ratios (Andy).") %>%
+kableExtra::kable_styling(font_size = 9)
+df_1st_OR_kbl
 ```
 
+```{r}
+df_1st_Felson <- data.frame(
+  all_gender = c(3.98, 8.48),
+  male = c(3.57, 8.69),
+  female = c(4.41, 7.69)
+) %>% t() %>% data.frame() %>% tibble()
+rownames(df_1st_Felson) <- c("all_gender", "male", "female")
+names(df_1st_Felson) <- c("Occasionally", "Frequently")
+df_1st_Felson_kbl <- df_1st_Felson %>% rownames_to_column("Gender") %>% 
+kable(format = "latex", booktabs = TRUE, digits = 1,
+      caption = "Total association logistic regression odds ratios (Felson et al.).") %>%
+kableExtra::kable_styling(font_size = 9)
+df_1st_Felson_kbl
+```
+
+
+## Next Slide
 
 
