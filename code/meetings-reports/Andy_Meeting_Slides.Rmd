@@ -22,9 +22,11 @@ library(htmltools)
 library(xtable)
 ```
 
+
+
 ## Agenda 4/6/2023
 
-- Discuss data pre-processing script
+- Discuss R Project workflow and data pre-processing script
 
 - Andy's updates on modeling
 
@@ -32,9 +34,21 @@ library(xtable)
 
 - Discuss structure of report
 
+## R Projects
+
+- "Sandbox" workspace for a specific project
+
+- Main advantage is there is no need to change working directories or paths
+
+- There is only 1 R project: `code`
+
+- To open the project, double click `code.Rproj` (should open a new RStudio window)
+
+- You must have open the `.Rproj` file before opening and running any `.R` or `.Rmd` file
+
 ## Data pre-processing
 
-- There is an R script in the `andy-eda`
+- There is an R script in the `code/` directory
 
 ```{r}
 # reading in data and recoding it
@@ -78,6 +92,17 @@ tassoc_female_1st <- glm(intercourse_dummy ~ intoxication,
 odds_ratio_f <- exp(tassoc_female_1st$coefficients)
 ```
 
+# Replicating Felson Study 1: Effect of intoxication on sexual intercourse
+
+## Judgment calls
+
+*Note:* all of the code can be found in the accompanying `.Rmd` file for these slides
+
+- Removing NAs in outcome (intercourse)
+
+- People who refused to respond were categorized in the reference category (no for sex, never for alcohol)
+
+## Total Association with logistic regression
 
 ```{r}
 df_1st_OR <- data.frame(
@@ -87,10 +112,12 @@ df_1st_OR <- data.frame(
 ) %>% t() %>% data.frame() %>% tibble()
 rownames(df_1st_OR) <- c("all_gender", "male", "female")
 names(df_1st_OR) <- c("Occasionally", "Frequently")
-df_1st_OR_kbl <- df_1st_OR %>% rownames_to_column("Gender") %>% 
-kable(format = "latex", booktabs = TRUE, digits = 1,
+df_1st_OR_kbl <- df_1st_OR %>% 
+  rownames_to_column("Gender") %>% 
+  dplyr::mutate(OR_diff = abs(Occasionally - Frequently)) %>% 
+  kable(format = "latex", booktabs = TRUE, digits = 1,
       caption = "Total association logistic regression odds ratios (Andy).") %>%
-kableExtra::kable_styling(font_size = 9)
+  kableExtra::kable_styling(font_size = 10)
 df_1st_OR_kbl
 ```
 
@@ -102,14 +129,16 @@ df_1st_Felson <- data.frame(
 ) %>% t() %>% data.frame() %>% tibble()
 rownames(df_1st_Felson) <- c("all_gender", "male", "female")
 names(df_1st_Felson) <- c("Occasionally", "Frequently")
-df_1st_Felson_kbl <- df_1st_Felson %>% rownames_to_column("Gender") %>% 
-kable(format = "latex", booktabs = TRUE, digits = 1,
-      caption = "Total association logistic regression odds ratios (Felson et al.).") %>%
-kableExtra::kable_styling(font_size = 9)
+df_1st_Felson_kbl <- df_1st_Felson %>% 
+  rownames_to_column("Gender") %>% 
+  dplyr::mutate(OR_diff = abs(Occasionally - Frequently)) %>% 
+  kable(format = "latex", booktabs = TRUE, digits = 1,
+      caption = "Total association logistic regression odds ratios (Felson et al.).") %>% 
+  kableExtra::kable_styling(font_size = 10)
 df_1st_Felson_kbl
 ```
 
 
-## Next Slide
+## Spurious effect using multinomial logistic regression
 
 
