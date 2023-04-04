@@ -167,6 +167,14 @@ df_1st_Felson_kbl
 spurious_assoc_1st <- nnet::multinom(intox_most_recent_sex ~ intoxication,
                                      data = df_1st_logistic)
 summary(spurious_assoc_1st)
+
+spurious_assoc_1st_m <- nnet::multinom(intox_most_recent_sex ~ intoxication,
+                                     data = df_1st_logistic %>% dplyr::filter(sex == 1))
+summary(spurious_assoc_1st_m)
+
+spurious_assoc_1st_f <- nnet::multinom(intox_most_recent_sex ~ intoxication,
+                                     data = df_1st_logistic %>% dplyr::filter(sex == 2))
+summary(spurious_assoc_1st_f)
 ```
 
 

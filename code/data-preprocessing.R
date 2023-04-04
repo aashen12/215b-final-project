@@ -102,9 +102,9 @@ df_first_study <- df %>%
   dplyr::rename(sex = BIO_SEX,
                 intoxication = H1TO18,
                 intercourse_dummy = H1CO1,
-                intox_most_recent_sex = paste0("H1JO", sex_drink_subcode)) %>%  
-  dplyr::mutate_at(.vars = c("sex", "intoxication", "intercourse_dummy", "intox_most_recent_sex"), 
-                   factor)
+                intox_most_recent_sex = paste0("H1JO", sex_drink_subcode)) #%>%  
+  # dplyr::mutate_at(.vars = c("sex", "intoxication", "intercourse_dummy", "intox_most_recent_sex"), 
+  #                  factor)
 # converts categorical columns to factors
 # remove NA's
 
@@ -120,7 +120,7 @@ df_first_study$intoxication <- ifelse(
 
 if (sex_drink_subcode == 3) {
   df_first_study$intox_most_recent_sex <- ifelse(
-    df_first_study$intox_most_recent_sex %in% c(0),
+    df_first_study$intox_most_recent_sex %in% c(0, 2),
     "sober",
     ifelse(
       df_first_study$intox_most_recent_sex %in% c(1),
@@ -143,6 +143,23 @@ if (sex_drink_subcode == 3) {
 # recoding the data as done by felson 2020
 # Felson 2020 do not provide a way to account for missing data. We treat them as nevers here. 
 #  This is a judgment call that is subject to change.
+
+
+############################################################################
+############################################################################
+
+##################################################################
+##                Recoding contradictory entries                ##
+##################################################################
+
+# Here we look through the entries and fix any contradicting intoxication/sexual intercourse rows
+# for instance there are people coded as having sex yet they are "nevers" for intoxication during most recent sex
+
+
+
+
+############################################################################
+############################################################################
 
 dir_name <- "processed-data"
 
