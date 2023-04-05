@@ -108,6 +108,9 @@ df_first_study <- df %>%
 # converts categorical columns to factors
 # remove NA's
 
+
+
+
 df_first_study$intoxication <- ifelse(
   df_first_study$intoxication %in% c(1, 2, 3),
   "frequently", # frequently
@@ -117,32 +120,6 @@ df_first_study$intoxication <- ifelse(
     "never" # never. NA included in this group
   )
 ) %>% factor() 
-
-if (sex_drink_subcode == 3) {
-  df_first_study$intox_most_recent_sex <- ifelse(
-    df_first_study$intox_most_recent_sex %in% c(0, 2),
-    "sober",
-    ifelse(
-      df_first_study$intox_most_recent_sex %in% c(1),
-      "intoxicated",
-      "never" # NA included
-    )
-  ) %>% factor()
-} else if (sex_drink_subcode == 4) {
-  df_first_study$intox_most_recent_sex <- ifelse(
-    df_first_study$intox_most_recent_sex %in% c(0),
-    "sober",
-    ifelse(
-      df_first_study$intox_most_recent_sex %in% c(1),
-      "intoxicated",
-      "never" # NA included
-    )
-  ) %>% factor()
-}
-
-# recoding the data as done by felson 2020
-# Felson 2020 do not provide a way to account for missing data. We treat them as nevers here. 
-#  This is a judgment call that is subject to change.
 
 
 ############################################################################
@@ -157,6 +134,37 @@ if (sex_drink_subcode == 3) {
 
 
 
+sober_sex_condition <- (df_first_study$intox_most_recent_sex %in% c(0, 2) & df_first_study$intercourse_dummy %in% c(1)) | 
+  (df_first_study$intercourse_dummy %in% c(1) & df_first_study$intoxication %in% c("never"))
+# to have sober sex, you must have the proper rating (0 or 2) and have had sex in the first place, OR
+#. you must have had sex and never drank at all 
+
+intoxicated_sex_condition <- (df_first_study$intox_most_recent_sex %in% c(1) & df_first_study$intercourse_dummy %in% c(1)) 
+# to have intoxicated sex, you must respond to previously having sex and have the proper rating (1)
+
+df_first_study$intox_most_recent_sex_words <- ifelse(
+  sober_sex_condition,
+  "sober",
+  ifelse(
+    intoxicated_sex_condition,
+    "intoxicated",
+    df_first_study$intox_most_recent_sex
+  )
+)
+df_first_study$intox_most_recent_sex_words <- ifelse(
+  is.na(df_first_study$intox_most_recent_sex_words) & df_first_study$intercourse_dummy %in% c(0),
+  "never",
+  df_first_study$intox_most_recent_sex_words
+)
+
+
+df_first_study %>% sample_n(12)
+
+# recoding the data as done by felson 2020
+# Felson 2020 do not provide a way to account for missing data. We treat them as nevers here. 
+#  This is a judgment call that is subject to change.
+
+
 
 ############################################################################
 ############################################################################
@@ -166,6 +174,11 @@ dir_name <- "processed-data"
 if (!dir.exists(dir_name)) {
   dir.create(dir_name)
 }
+
+na_df <- df_first_study[which(is.na(df_first_study)),]
+apply(na_df, 1, function(row) {sum(is.na(row))}) %>% unique()
+
+
 
 write_csv(df_first_study, paste0(dir_name, "/intox_sex_file.csv"))
 

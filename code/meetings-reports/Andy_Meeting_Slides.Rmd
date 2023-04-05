@@ -51,6 +51,8 @@ library(nnet)
 
 - There is an R script in the `code/` directory
 
+- Judgment calls and decision rules
+
 ```{r}
 # reading in data and recoding it
 df_first_study <- read_csv("../processed-data/intox_sex_file.csv")
@@ -62,8 +64,8 @@ df_first_study$intoxication <- relevel(df_first_study$intoxication, ref = "never
 
 df_first_study$intercourse_dummy <- factor(df_first_study$intercourse_dummy)
 
-df_first_study$intox_most_recent_sex <- factor(df_first_study$intox_most_recent_sex)
-df_first_study$intox_most_recent_sex <- relevel(df_first_study$intox_most_recent_sex, ref = "never")
+df_first_study$intox_most_recent_sex_words <- factor(df_first_study$intox_most_recent_sex_words)
+df_first_study$intox_most_recent_sex_words <- relevel(df_first_study$intox_most_recent_sex_words, ref = "never")
 
 
 df_1st_logistic <- df_first_study
@@ -84,19 +86,19 @@ tassoc_1st <- glm(intercourse_dummy ~ intoxication,
                   data = df_1st_logistic, 
                   family = "binomial")
 # summary(tassoc_1st)
-odds_ratio_mf <- exp(tassoc_1st$coefficients) %>% log()
+odds_ratio_mf <- exp(tassoc_1st$coefficients) #%>% log()
 
 tassoc_male_1st <- glm(intercourse_dummy ~ intoxication, 
                   data = df_1st_logistic %>% dplyr::filter(sex == 1), 
                   family = "binomial")
 # summary(tassoc_male_1st)
-odds_ratio_m <- exp(tassoc_male_1st$coefficients) %>% log()
+odds_ratio_m <- exp(tassoc_male_1st$coefficients) #%>% log()
 
 tassoc_female_1st <- glm(intercourse_dummy ~ intoxication, 
                   data = df_1st_logistic %>% dplyr::filter(sex == 2), 
                   family = "binomial")
 # summary(tassoc_female_1st)
-odds_ratio_f <- exp(tassoc_female_1st$coefficients) %>% log()
+odds_ratio_f <- exp(tassoc_female_1st$coefficients) #%>% log()
 ```
 
 # Replicating Felson Study 1: Effect of intoxication on sexual intercourse
@@ -161,21 +163,88 @@ df_1st_Felson_kbl
 - How does this relate to spuriousness?
 
 
-## Spurious effect using multinomial logistic regression
+## Spuriousness of intoxication on sober sex
+
+### Summary
+
+- x
+
+- y
+
+- z
+
+
+## Spuriousness of intoxication on sober sex
 
 ```{r}
-spurious_assoc_1st <- nnet::multinom(intox_most_recent_sex ~ intoxication,
-                                     data = df_1st_logistic)
-summary(spurious_assoc_1st)
-
-spurious_assoc_1st_m <- nnet::multinom(intox_most_recent_sex ~ intoxication,
-                                     data = df_1st_logistic %>% dplyr::filter(sex == 1))
-summary(spurious_assoc_1st_m)
-
-spurious_assoc_1st_f <- nnet::multinom(intox_most_recent_sex ~ intoxication,
-                                     data = df_1st_logistic %>% dplyr::filter(sex == 2))
-summary(spurious_assoc_1st_f)
+spurious_assoc_1st <- nnet::multinom(intox_most_recent_sex_words ~ intoxication,
+                                     data = df_1st_logistic, trace = FALSE)
+# summary(spurious_assoc_1st)
 ```
+
+```{r}
+spur_coefs_all <- coef(spurious_assoc_1st)[, -1][-1, ] %>% rev()
+tot_coefs_all <- tassoc_1st$coefficients[-1] %>% rev()
+# spur_coefs_all; tot_coefs_all
+spuriousness_all <- spur_coefs_all / tot_coefs_all * 100
+```
+
+```{r}
+spurious_assoc_male_1st <- nnet::multinom(intox_most_recent_sex_words ~ intoxication,
+                                     data = df_1st_logistic %>% dplyr::filter(sex == 1),
+                                     trace = FALSE)
+```
+
+```{r}
+spur_coefs_male <- coef(spurious_assoc_male_1st)[, -1][-1, ] %>% rev()
+tot_coefs_male <- tassoc_male_1st$coefficients[-1] %>% rev()
+spuriousness_male <- spur_coefs_male / tot_coefs_male * 100
+```
+
+
+```{r}
+spurious_assoc_female_1st <- nnet::multinom(intox_most_recent_sex_words ~ intoxication,
+                                     data = df_1st_logistic %>% dplyr::filter(sex == 2),
+                                     trace = FALSE)
+```
+
+```{r}
+spur_coefs_female <- coef(spurious_assoc_female_1st)[, -1][-1, ] %>% rev()
+tot_coefs_female <- tassoc_female_1st$coefficients[-1] %>% rev()
+spuriousness_female <- spur_coefs_female / tot_coefs_female * 100
+```
+
+
+
+
+```{r}
+spur_df <- data.frame(
+  "all_gender"  = spuriousness_all,
+  "males" = spuriousness_male,
+  "females" = spuriousness_female
+) %>% t() %>% data.frame()
+names(spur_df) <- c("Occasionally", "Frequently")
+spur_df %>% 
+  knitr::kable(digits = 1, 
+               booktabs = TRUE,
+               format = 'latex',
+               caption = "Our spuriousness values") %>% 
+  kableExtra::kable_styling(font_size = 10)
+```
+
+```{r}
+felson_1st_spur <- data.frame(
+  "Occasionally" = c(95.7, 95.3, 97.3),
+  "Frequently" = c(91.6, 91.2, 93.6)
+)
+rownames(felson_1st_spur) <- c("all_gender", "males", "females")
+felson_1st_spur %>% 
+  knitr::kable(booktabs = TRUE,
+               format = 'latex',
+               caption = "Felson's spuriousness values") %>% 
+  kableExtra::kable_styling(font_size = 10)
+```
+
 
 
 ## Issues with situational decomposition
