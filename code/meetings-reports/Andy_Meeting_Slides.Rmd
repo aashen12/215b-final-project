@@ -439,5 +439,7 @@ felson_2nd_spur %>%
   
   - Look into doing IVLS with binary outcome (IV logistic regression)
 
+- Tiffany
 
+  - 
 
