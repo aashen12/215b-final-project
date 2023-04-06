@@ -84,10 +84,10 @@ sex_intercourse_code <- "H1CO1"
 sex_drink_subcode <- 3
 
 drunk_most_recent_sex <- paste0("H1JO", sex_drink_subcode)
-# H1JO1: did you drink during your first time?
-# H1JO2: were you drunk during your first time?
+# H1JO1: did you drink during your second time?
+# H1JO2: were you drunk during your second time?
 # H1JO3: did you drink during your last sexual encounter?
-#   (I think Felson used this for the first study multinom. logisic regression)
+#   (I think Felson used this for the second study multinom. logisic regression)
 #.  0: no --> sober
 #.  1: yes --> intoxicated
 #.  2: You have had sexual intercourse only once. --> sober
@@ -201,13 +201,66 @@ df_intercourse <- df %>%
 
 df_virgin <- df %>% 
   dplyr::filter(H1CO1 != 1) 
-# only contains respondents who have not had sex. Includes people who do not know or refused
+# only contains respondents who have not had sex. Includes people who do not know or refused (NA)
+
+
+contraception_code <- "H1CO6"
+
+
+df_second_study <- df_intercourse %>% 
+  dplyr::select(AID, BIO_SEX, all_of(c(intox_freq_code, sex_intercourse_code, drunk_most_recent_sex, contraception_code))) %>% 
+  dplyr::rename(sex = BIO_SEX,
+                intoxication = H1TO18,
+                intercourse_dummy = H1CO1,
+                intox_most_recent_sex = paste0("H1JO", sex_drink_subcode),
+                contraception_use  = H1CO6)
+
+
+df_second_study$intoxication <- ifelse(
+  df_second_study$intoxication %in% c(1, 2, 3),
+  "frequently", # frequently
+  ifelse(
+    df_second_study$intoxication %in% c(4, 5, 6),
+    "occasionally", # occasionally
+    "never" # never. NA included in this group
+  )
+) %>% factor() 
 
 
 
+sober_sex_condition <- (df_second_study$intox_most_recent_sex %in% c(0, 2) & df_second_study$intercourse_dummy %in% c(1)) | 
+  (df_second_study$intercourse_dummy %in% c(1) & df_second_study$intoxication %in% c("never"))
+# to have sober sex, you must have the proper rating (0 or 2) and have had sex in the second place, OR
+#. you must have had sex and never drank at all 
+
+intoxicated_sex_condition <- (df_second_study$intox_most_recent_sex %in% c(1) & df_second_study$intercourse_dummy %in% c(1)) 
+# to have intoxicated sex, you must respond to previously having sex and have the proper rating (1)
+
+df_second_study$intox_most_recent_sex_words <- ifelse(
+  sober_sex_condition,
+  "sober",
+  ifelse(
+    intoxicated_sex_condition,
+    "intoxicated",
+    "sober"
+  )
+)
+
+df_second_study$contraception_use[is.na(df_second_study$contraception_use)] <- 0
+# assume NA means they did not use 
+# we may need to reomve these entries later
+
+df_second_study$contraception_use_words <- ifelse(df_second_study$contraception_use == 0, "no_use", "use")
 
 
+df_second_study$contraception_sex <- ifelse(
+  df_second_study$contraception_use %in% c(1),
+  "use",
+  paste0(df_second_study$intox_most_recent_sex_words, "_", ifelse(df_second_study$contraception_use == 0, "no_use", "use"))
+)
+
+df_second_study %>% sample_n(12)
 
 
-
+write_csv(df_second_study, paste0(dir_name, "/intox_contraception_file.csv"))
 
