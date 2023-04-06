@@ -335,15 +335,6 @@ df_2nd_Felson_kbl
 
 
 
-### Summary
-
-- x
-
-- y
-
-- z
-
-
 ## Spuriousness of intoxication on contraception use
 
 ```{r}
@@ -421,6 +412,18 @@ felson_2nd_spur %>%
 
 - This happens to be the only result with a reasonable spuriousness value!
 
+# Critiquing situational decomposition
+
+## Questions from our proposal
+
+- Does SD make sense? 
+
+- Under what assumptions would SD yield the correct result? 
+
+- Are these assumptions reasonable in this setting? 
+
+- Can we construct an example in which SD fails? 
+
 
 ## Issues with situational decomposition
 
@@ -433,7 +436,7 @@ felson_2nd_spur %>%
 
 - Andy 
 
-  - Write up today's slides into a latex document called `final-report.tex` (formatted by TD)
+  - Write up today's results into a latex document called `final-report.tex` (formatted by TD)
   
   - Start preprocessing data for instrumental variables analysis
   
@@ -441,5 +444,13 @@ felson_2nd_spur %>%
 
 - Tiffany
 
-  - 
+  - Look into a sensitivity analysis method (Rosenbaum p-value bound?)
+  
+  - Write up "Evaluating situational decomposition" after all the questions in the proposal (section 3.1) are discussed
+  
+- Andy and Tiffany
+
+  - Come up with a mathematically driven causal inference model  
+  
+  - Decide which covariates should be adjusted for in IVLS or a re-do of Felson
 
