@@ -155,7 +155,9 @@ df_1st_Felson_kbl
 
 ## Takeaways
 
-- Pretty concordant with the paper
+- This seems pretty good
+
+- Now let's discuss spuriousness
 
 
 ## Spuriousness of intoxication on sober sex
@@ -429,8 +431,7 @@ felson_2nd_spur %>%
 ## E-value
 
 - Peng's causal notes discuss the E-value for logistic regression (section 17.4.2)
-
-
+  - Could be a good starting point for a sensitivity analysis
 
 
 ## Next steps
