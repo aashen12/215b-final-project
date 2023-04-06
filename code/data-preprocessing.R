@@ -248,7 +248,7 @@ df_second_study$intox_most_recent_sex_words <- ifelse(
 
 df_second_study$contraception_use[is.na(df_second_study$contraception_use)] <- 0
 # assume NA means they did not use 
-# we may need to reomve these entries later
+# we may need to remove these entries later
 
 df_second_study$contraception_use_words <- ifelse(df_second_study$contraception_use == 0, "no_use", "use")
 

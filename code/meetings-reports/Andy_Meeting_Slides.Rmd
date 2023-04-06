@@ -68,7 +68,7 @@ df_first_study$intox_most_recent_sex_words <- factor(df_first_study$intox_most_r
 df_first_study$intox_most_recent_sex_words <- relevel(df_first_study$intox_most_recent_sex_words, ref = "never")
 
 
-df_1st_logistic <- df_first_study
+df_1st_logistic <- df_first_study # %>% na.omit()
 
 # creating dummy variables for intoxication in case we need it later.
 # df_1st_logistic <- df_first_study %>% 
@@ -105,9 +105,10 @@ odds_ratio_f <- exp(tassoc_female_1st$coefficients) #%>% log()
 
 ## Judgment calls
 
-*Note:* all of the code can be found in the accompanying `.Rmd` file for these slides
 
-- Removing NAs in outcome (intercourse)
+*Note:* all of the code for these slides can be found in the accompanying `.Rmd` file 
+
+- Remove entries with all `NA`
 
 - People who refused to respond were categorized in the reference category (no for sex, never for alcohol)
 
@@ -154,13 +155,7 @@ df_1st_Felson_kbl
 
 ## Takeaways
 
-- Let's assume this subsample is representative of the larger sample used in the paper
-
-- In this case, our analysis has "closed the gap" in terms of odds ratios
-
-- Perhaps the tendency to have sex isn't *that* drastic for occasional vs frequent drinkers?
-
-- How does this relate to spuriousness?
+- Pretty concordant with the paper
 
 
 ## Spuriousness of intoxication on sober sex
@@ -431,26 +426,25 @@ felson_2nd_spur %>%
 
 - What happens when the coefficient is negative? (Felson seems to wave it away)
 
+## E-value
+
+- Peng's causal notes discuss the E-value for logistic regression (section 17.4.2)
+
+
+
 
 ## Next steps
 
 - Andy 
-
   - Write up today's results into a latex document called `final-report.tex` (formatted by TD)
-  
   - Start preprocessing data for instrumental variables analysis
-  
   - Look into doing IVLS with binary outcome (IV logistic regression)
 
 - Tiffany
-
-  - Look into a sensitivity analysis method (Rosenbaum p-value bound?)
-  
+  - Look into a sensitivity analysis method (Rosenbaum has [R packages](http://www-stat.wharton.upenn.edu/~rosenbap/packpaper.pdf))
   - Write up "Evaluating situational decomposition" after all the questions in the proposal (section 3.1) are discussed
   
 - Andy and Tiffany
-
-  - Come up with a mathematically driven causal inference model  
-  
+  - Come up with a mathematically driven causal inference model (multi-level treatments) 
   - Decide which covariates should be adjusted for in IVLS or a re-do of Felson
 
