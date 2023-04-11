@@ -60,13 +60,13 @@ df_1st_OR <- data.frame(
   female = odds_ratio_f[-1] %>% rev() # do not need intercept coef
 ) %>% t() %>% data.frame() %>% tibble()
 rownames(df_1st_OR) <- c("all_gender", "male", "female")
-names(df_1st_OR) <- c("Occasionally", "Frequently")
+names(df_1st_OR) <- c("gamma (occasionally)", "gamma (frequently)")
 
 df_1st_OR_kbl <- df_1st_OR %>% 
   rownames_to_column("Gender")
 df_1st_OR_kbl
 print(xtable::xtable(df_1st_OR_kbl, digits = 1, 
-                     caption = "Our replicated odds ratios from regressing intercourse on alcohol.", 
+                     caption = "Our reproduced odds ratios from the first study.", 
                      label = "table:our_or_1st"), 
       booktabs = TRUE, 
       align ="|c|c|c|")
@@ -80,13 +80,13 @@ df_1st_Felson <- data.frame(
   female = c(4.41, 7.69)
 ) %>% t() %>% data.frame() %>% tibble()
 rownames(df_1st_Felson) <- c("all_gender", "male", "female")
-names(df_1st_Felson) <- c("Occasionally", "Frequently")
+names(df_1st_Felson) <- c("gamma (occasionally)", "gamma (frequently)")
 
 # display purposes
 df_1st_Felson_kbl <- df_1st_Felson %>% 
   rownames_to_column("Gender")
 print(xtable::xtable(df_1st_Felson_kbl, digits = 1, 
-                     caption = "Felson's reported odds ratios from regressing intercourse on alcohol.", 
+                     caption = "Felson's reported odds ratios from the first study.", 
                      label = "table:felson_or_1st"), 
       booktabs = TRUE, 
       align ="|c|c|c|")
@@ -135,25 +135,26 @@ spur_df <- data.frame(
   "males" = spuriousness_male,
   "females" = spuriousness_female
 ) %>% t() %>% data.frame()
-names(spur_df) <- c("Occasionally", "Frequently")
-spur_df
+names(spur_df) <- c("rho (occasionally)", "rho (frequently)")
 print(xtable::xtable(spur_df, digits = 1, 
-                     caption = "Felson's reported odds ratios from regressing intercourse on alcohol.", 
-                     label = "table:felson_or_1st"), 
+                     caption = "Our reproduced spuriousness values from the first study.", 
+                     label = "table:our_spur_1st"), 
       booktabs = TRUE, 
       align ="|c|c|")
 
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
 felson_1st_spur <- data.frame(
-  "Occasionally" = c(95.7, 95.3, 97.3),
-  "Frequently" = c(91.6, 91.2, 93.6)
-)
-rownames(felson_1st_spur) <- c("all_gender", "males", "females")
-felson_1st_spur %>% 
-  knitr::kable(booktabs = TRUE,
-               format = 'latex',
-               caption = "Felson's spuriousness values") %>% 
-  kableExtra::kable_styling(font_size = 10)
+  "all_gender" = c(95.7, 91.6),
+  "males" = c(95.3, 91.2),
+  "females" = c(97.3, 93.6)
+) %>% t() %>% data.frame()
+names(felson_1st_spur) <- c("rho (occasionally)", "rho (frequently)")
+print(xtable::xtable(felson_1st_spur %>% rownames_to_column("Gender"), digits = 1, 
+                     caption = "Our reproduced spuriousness values from the first study.", 
+                     label = "table:our_spur_1st"), 
+      booktabs = TRUE, 
+      align ="|c|c|")
+
 
 
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -194,40 +195,40 @@ odds_ratio_f <- exp(tassoc_female_2nd$coefficients) #%>% log()
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
 # inputting our numbers into a table for display
 df_2nd_OR <- data.frame(
-  all_gender = odds_ratio_mf[-1] %>% rev(),
-  male = odds_ratio_m[-1] %>% rev(),
-  female = odds_ratio_f[-1] %>% rev() # do not need intercept coef
-) %>% t() %>% data.frame() %>% tibble()
+  all_gender = tassoc_2nd$coefficients[-1] %>% rev(),
+  male = tassoc_male_2nd$coefficients[-1] %>% rev(),
+  female = tassoc_female_2nd$coefficients[-1] %>% rev() # do not need intercept coef
+) %>% t() %>% data.frame()
 rownames(df_2nd_OR) <- c("all_gender", "male", "female")
-names(df_2nd_OR) <- c("Occasionally", "Frequently")
+names(df_2nd_OR) <- c("gamma (occasionally)", "gamma (frequently)")
 
 df_2nd_OR_kbl <- df_2nd_OR %>% 
-  rownames_to_column("Gender") %>% 
-  dplyr::mutate(OR_diff = abs(Occasionally - Frequently)) %>% 
-  kable(format = "latex", booktabs = TRUE, digits = 2,
-      caption = "Total association logistic regression odds ratios (Andy).") %>%
-  kableExtra::kable_styling(font_size = 10)
+  rownames_to_column("Gender")
 df_2nd_OR_kbl
-
+print(xtable::xtable(df_2nd_OR_kbl, digits = 2, 
+                     caption = "Our reproduced gamma coefficients from the second study", 
+                     label = "table:our_or_2nd"), 
+      booktabs = TRUE, 
+      align ="|c|c|")
 
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
 # inputting felson's numbers
 df_2nd_Felson <- data.frame(
-  all_gender = c(1.05, 1.38),
-  male = c(1.00, 1.40),
-  female = c(1.07, 1.51)
-) %>% t() %>% data.frame() %>% tibble()
+  all_gender = c(0.04, 0.32),
+  male = c(0, 0.34),
+  female = c(0.07, 0.41)
+) %>% t() %>% data.frame()
 rownames(df_2nd_Felson) <- c("all_gender", "male", "female")
-names(df_2nd_Felson) <- c("Occasionally", "Frequently")
+names(df_2nd_Felson) <- c("gamma (occasionally)", "gamma (frequently)")
 
 # display purposes
 df_2nd_Felson_kbl <- df_2nd_Felson %>% 
-  rownames_to_column("Gender") %>% 
-  dplyr::mutate(OR_diff = abs(Occasionally - Frequently)) %>% 
-  kable(format = "latex", booktabs = TRUE, digits = 2,
-      caption = "Total association logistic regression odds ratios (Felson et al.).") %>% 
-  kableExtra::kable_styling(font_size = 10)
-df_2nd_Felson_kbl
+  rownames_to_column("Gender")
+print(xtable::xtable(df_2nd_Felson_kbl, digits = 2, 
+                     caption = "Felson's gamma coefficients from the second study", 
+                     label = "table:felson_or_2nd"), 
+      booktabs = TRUE, 
+      align ="|c|c|")
 
 
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -273,28 +274,25 @@ spur_df <- data.frame(
   "males" = spuriousness_male,
   "females" = spuriousness_female
 ) %>% t() %>% data.frame()
-names(spur_df) <- c("Occasionally", "Frequently")
-spur_df %>% 
-  knitr::kable(digits = 1, 
-               booktabs = TRUE,
-               format = 'latex',
-               caption = "Our spuriousness values") %>% 
-  kableExtra::kable_styling(font_size = 10)
+names(spur_df) <- c("rho (occasionally)", "rho (frequently)")
+print(xtable::xtable(spur_df %>% rownames_to_column("Gender"), digits = 1, 
+                     caption = "Our reproduced spuriousness values from the second study", 
+                     label = "table:our_spur_2nd"), 
+      booktabs = TRUE, 
+      align ="|c|c|")
 
 
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
 felson_2nd_spur <- data.frame(
-  "Occasionally" = rep(NA, 3),
-  "Frequently" = c(46.9, 41.1, 68.3)
-)
-rownames(felson_2nd_spur) <- c("all_gender", "males", "females")
-felson_2nd_spur %>% 
-  knitr::kable(booktabs = TRUE,
-               format = 'latex',
-               caption = "Felson's spuriousness values") %>% 
-  kableExtra::kable_styling(font_size = 10)
+  all_gender = c(Inf, 46.9),
+  male = c(Inf, 41.1),
+  female = c(Inf, 68.3)
+) %>% t() %>% data.frame()
+names(felson_2nd_spur) <- c("rho (occasionally)", "rho (frequently)")
+print(xtable::xtable(felson_2nd_spur %>% rownames_to_column("Gender"), digits = 1, 
+                     caption = "Felson's reported spuriousness values from the second study", 
+                     label = "table:felson_spur_2nd"), 
+      booktabs = TRUE, 
+      align ="|c|c|")
 
-
-## --------------------------------------------------------------------------------------------------------------------------------------------------
-knitr::purl("Andy_Meeting_Slides.R")
 
