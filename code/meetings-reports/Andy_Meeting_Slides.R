@@ -1,59 +1,11 @@
----
-title: "Andy's Modeling Updates"
-author: "Andy Shen"
-date: "`r Sys.Date()`"
-header-includes:
-  - \usepackage{booktabs}
-output: 
-  beamer_presentation:
-    theme: "Warsaw"
-    colortheme: "seahorse"
-    slide_level: 2
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,
-                      warning = FALSE,
-                      message = FALSE,
-                      fig.align = "center")
 library(tidyverse)
 library(kableExtra)
 library(htmltools)
 library(xtable)
 library(nnet)
-```
 
 
-
-## Agenda 4/6/2023
-
-- Discuss R Project workflow and data pre-processing script
-
-- Andy's updates on modeling
-
-- "Evaluating situational decomposition" qualms
-
-- Discuss structure of report
-
-## R Projects
-
-- "Sandbox" workspace for a specific project
-
-- Main advantage is there is no need to change working directories or paths
-
-- There is only 1 R project: `code`
-
-- To open the project, double click `code.Rproj` (should open a new RStudio window)
-
-- You must have open the `.Rproj` file before opening and running any `.R` or `.Rmd` file
-
-## Data pre-processing
-
-- There is an R script in the `code/` directory
-
-- Judgment calls and decision rules
-
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 # reading in data and recoding it
 df_first_study <- read_csv("../processed-data/intox_sex_file.csv")
 
@@ -77,10 +29,9 @@ df_1st_logistic <- df_first_study # %>% na.omit()
 #     occasion_intox = ifelse(intoxication == "occasionally", 1, 0),
 #     frequently_intox = ifelse(intoxication == "frequently", 1, 0)
 #   )
-```
 
 
-```{r, eval=TRUE}
+## ---- eval=TRUE------------------------------------------------------------------------------------------------------------------------------------
 # running inividual logistic regressions
 tassoc_1st <- glm(intercourse_dummy ~ intoxication, 
                   data = df_1st_logistic, 
@@ -99,22 +50,9 @@ tassoc_female_1st <- glm(intercourse_dummy ~ intoxication,
                   family = "binomial")
 # summary(tassoc_female_1st)
 odds_ratio_f <- exp(tassoc_female_1st$coefficients) #%>% log()
-```
-
-# Replicating Felson Study 1: Effect of intoxication on sexual intercourse
-
-## Judgment calls
 
 
-*Note:* all of the code for these slides can be found in the accompanying `.Rmd` file 
-
-- Remove entries with all `NA`
-
-- People who refused to respond were categorized in the reference category (no for sex, never for alcohol)
-
-## Total association with logistic regression
-
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 # inputting our numbers into a table for display
 df_1st_OR <- data.frame(
   all_gender = odds_ratio_mf[-1] %>% rev(),
@@ -125,15 +63,16 @@ rownames(df_1st_OR) <- c("all_gender", "male", "female")
 names(df_1st_OR) <- c("Occasionally", "Frequently")
 
 df_1st_OR_kbl <- df_1st_OR %>% 
-  rownames_to_column("Gender") %>% 
-  dplyr::mutate(OR_diff = abs(Occasionally - Frequently)) %>% 
-  kable(format = "latex", booktabs = TRUE, digits = 1,
-      caption = "Total association logistic regression odds ratios (Andy).") %>%
-  kableExtra::kable_styling(font_size = 10)
+  rownames_to_column("Gender")
 df_1st_OR_kbl
-```
+print(xtable::xtable(df_1st_OR_kbl, digits = 1, 
+                     caption = "Our replicated odds ratios from regressing intercourse on alcohol.", 
+                     label = "table:our_or_1st"), 
+      booktabs = TRUE, 
+      align ="|c|c|c|")
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 # inputting felson's numbers
 df_1st_Felson <- data.frame(
   all_gender = c(3.98, 8.48),
@@ -145,80 +84,66 @@ names(df_1st_Felson) <- c("Occasionally", "Frequently")
 
 # display purposes
 df_1st_Felson_kbl <- df_1st_Felson %>% 
-  rownames_to_column("Gender") %>% 
-  dplyr::mutate(OR_diff = abs(Occasionally - Frequently)) %>% 
-  kable(format = "latex", booktabs = TRUE, digits = 1,
-      caption = "Total association logistic regression odds ratios (Felson et al.).") %>% 
-  kableExtra::kable_styling(font_size = 10)
-df_1st_Felson_kbl
-```
-
-## Takeaways
-
-- This seems pretty good
-
-- Now let's discuss spuriousness
+  rownames_to_column("Gender")
+print(xtable::xtable(df_1st_Felson_kbl, digits = 1, 
+                     caption = "Felson's reported odds ratios from regressing intercourse on alcohol.", 
+                     label = "table:felson_or_1st"), 
+      booktabs = TRUE, 
+      align ="|c|c|c|")
 
 
-## Spuriousness of intoxication on sober sex
-
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spurious_assoc_1st <- nnet::multinom(intox_most_recent_sex_words ~ intoxication,
                                      data = df_1st_logistic, trace = FALSE)
 # summary(spurious_assoc_1st)
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spur_coefs_all <- coef(spurious_assoc_1st)[, -1][-1, ] %>% rev()
 tot_coefs_all <- tassoc_1st$coefficients[-1] %>% rev()
 # spur_coefs_all; tot_coefs_all
 spuriousness_all <- spur_coefs_all / tot_coefs_all * 100
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spurious_assoc_male_1st <- nnet::multinom(intox_most_recent_sex_words ~ intoxication,
                                      data = df_1st_logistic %>% dplyr::filter(sex == 1),
                                      trace = FALSE)
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spur_coefs_male <- coef(spurious_assoc_male_1st)[, -1][-1, ] %>% rev()
 tot_coefs_male <- tassoc_male_1st$coefficients[-1] %>% rev()
 spuriousness_male <- spur_coefs_male / tot_coefs_male * 100
-```
 
 
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spurious_assoc_female_1st <- nnet::multinom(intox_most_recent_sex_words ~ intoxication,
                                      data = df_1st_logistic %>% dplyr::filter(sex == 2),
                                      trace = FALSE)
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spur_coefs_female <- coef(spurious_assoc_female_1st)[, -1][-1, ] %>% rev()
 tot_coefs_female <- tassoc_female_1st$coefficients[-1] %>% rev()
 spuriousness_female <- spur_coefs_female / tot_coefs_female * 100
-```
 
 
-
-
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spur_df <- data.frame(
   "all_gender"  = spuriousness_all,
   "males" = spuriousness_male,
   "females" = spuriousness_female
 ) %>% t() %>% data.frame()
 names(spur_df) <- c("Occasionally", "Frequently")
-spur_df %>% 
-  knitr::kable(digits = 1, 
-               booktabs = TRUE,
-               format = 'latex',
-               caption = "Our spuriousness values") %>% 
-  kableExtra::kable_styling(font_size = 10)
-```
+spur_df
+print(xtable::xtable(spur_df, digits = 1, 
+                     caption = "Felson's reported odds ratios from regressing intercourse on alcohol.", 
+                     label = "table:felson_or_1st"), 
+      booktabs = TRUE, 
+      align ="|c|c|")
 
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 felson_1st_spur <- data.frame(
   "Occasionally" = c(95.7, 95.3, 97.3),
   "Frequently" = c(91.6, 91.2, 93.6)
@@ -229,41 +154,23 @@ felson_1st_spur %>%
                format = 'latex',
                caption = "Felson's spuriousness values") %>% 
   kableExtra::kable_styling(font_size = 10)
-```
 
 
-
-# Replicating Felson Study 2: Effect of intoxication on contraceptive use
-
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 df_second_study <- read_csv("../processed-data/intox_contraception_file.csv") %>% 
   dplyr::select(-intox_most_recent_sex, -intercourse_dummy, -contraception_use, -intox_most_recent_sex_words) %>% 
   dplyr::mutate_at(vars(sex, intoxication, contraception_use_words, contraception_sex), factor)
-```
 
 
-## Data pre-processing
-
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 df_second_study$contraception_sex <- relevel(df_second_study$contraception_sex, ref = "use")
 df_second_study$contraception_use_words <- relevel(df_second_study$contraception_use_words, ref = "use")
 df_second_study$intoxication <- relevel(df_second_study$intoxication, ref = "never")
 
 df_2nd_logistic <- df_second_study
-```
 
 
-- Same R script: `data-preprocessing.R`
-
-- Reduce cases down to respondents who have had sex ($n=2565$)
-
-## Judgment Calls
-
-- NAs in contraception use were not given benefit of the doubt
-
-## Total association using logistic regression
-
-```{r, eval=TRUE}
+## ---- eval=TRUE------------------------------------------------------------------------------------------------------------------------------------
 # running inividual logistic regressions
 tassoc_2nd <- glm(contraception_use_words ~ intoxication, 
                   data = df_2nd_logistic, 
@@ -282,9 +189,9 @@ tassoc_female_2nd <- glm(contraception_use_words ~ intoxication,
                   family = "binomial")
 # summary(tassoc_female_2nd)
 odds_ratio_f <- exp(tassoc_female_2nd$coefficients) #%>% log()
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 # inputting our numbers into a table for display
 df_2nd_OR <- data.frame(
   all_gender = odds_ratio_mf[-1] %>% rev(),
@@ -301,9 +208,9 @@ df_2nd_OR_kbl <- df_2nd_OR %>%
       caption = "Total association logistic regression odds ratios (Andy).") %>%
   kableExtra::kable_styling(font_size = 10)
 df_2nd_OR_kbl
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 # inputting felson's numbers
 df_2nd_Felson <- data.frame(
   all_gender = c(1.05, 1.38),
@@ -321,61 +228,46 @@ df_2nd_Felson_kbl <- df_2nd_Felson %>%
       caption = "Total association logistic regression odds ratios (Felson et al.).") %>% 
   kableExtra::kable_styling(font_size = 10)
 df_2nd_Felson_kbl
-```
 
 
-## Takeaways
-
-- This seems pretty good
-
-- Now let's discuss spuriousness
-
-
-
-## Spuriousness of intoxication on contraception use
-
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spurious_assoc_2nd <- nnet::multinom(contraception_sex ~ intoxication,
                                      data = df_2nd_logistic, trace = FALSE)
 # summary(spurious_assoc_2nd)
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spur_coefs_all <- coef(spurious_assoc_2nd)[, -1][-1, ] %>% rev()
 tot_coefs_all <- tassoc_2nd$coefficients[-1] %>% rev()
 # spur_coefs_all; tot_coefs_all
 spuriousness_all <- spur_coefs_all / tot_coefs_all * 100
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spurious_assoc_male_2nd <- nnet::multinom(contraception_sex ~ intoxication,
                                      data = df_2nd_logistic %>% dplyr::filter(sex == 1),
                                      trace = FALSE)
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spur_coefs_male <- coef(spurious_assoc_male_2nd)[, -1][-1, ] %>% rev()
 tot_coefs_male <- tassoc_male_2nd$coefficients[-1] %>% rev()
 spuriousness_male <- spur_coefs_male / tot_coefs_male * 100
-```
 
 
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spurious_assoc_female_2nd <- nnet::multinom(contraception_sex ~ intoxication,
                                      data = df_2nd_logistic %>% dplyr::filter(sex == 2),
                                      trace = FALSE)
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spur_coefs_female <- coef(spurious_assoc_female_2nd)[, -1][-1, ] %>% rev()
 tot_coefs_female <- tassoc_female_2nd$coefficients[-1] %>% rev()
 spuriousness_female <- spur_coefs_female / tot_coefs_female * 100
-```
 
 
-
-
-```{r}
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 spur_df <- data.frame(
   "all_gender"  = spuriousness_all,
   "males" = spuriousness_male,
@@ -388,9 +280,9 @@ spur_df %>%
                format = 'latex',
                caption = "Our spuriousness values") %>% 
   kableExtra::kable_styling(font_size = 10)
-```
 
-```{r}
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------
 felson_2nd_spur <- data.frame(
   "Occasionally" = rep(NA, 3),
   "Frequently" = c(46.9, 41.1, 68.3)
@@ -401,56 +293,8 @@ felson_2nd_spur %>%
                format = 'latex',
                caption = "Felson's spuriousness values") %>% 
   kableExtra::kable_styling(font_size = 10)
-```
-
-## Side note
-
-- Both the coefficients from binary LR and multinomial LR are significant for frequent female drinkers only in Felson's study. 
-
-- This happens to be the only result with a reasonable spuriousness value!
-
-# Critiquing situational decomposition
-
-## Questions from our proposal
-
-- Does SD make sense? 
-
-- Under what assumptions would SD yield the correct result? 
-
-- Are these assumptions reasonable in this setting? 
-
-- Can we construct an example in which SD fails? 
 
 
-## Issues with situational decomposition
-
-- What happens when there is above 100% spuriousness?
-
-- What happens when the coefficient is negative? (Felson seems to wave it away)
-
-## E-value
-
-- Peng's causal notes discuss the E-value for logistic regression (section 17.4.2)
-  - Could be a good starting point for a sensitivity analysis
-
-
-## Next steps
-
-- Andy 
-  - Write up today's results into a latex document called `final-report.tex` (formatted by TD)
-  - Start preprocessing data for instrumental variables analysis
-  - Look into doing IVLS with binary outcome (IV logistic regression)
-
-- Tiffany
-  - Look into a sensitivity analysis method (Rosenbaum has [R packages](http://www-stat.wharton.upenn.edu/~rosenbap/packpaper.pdf))
-  - Write up "Evaluating situational decomposition" after all the questions in the proposal (section 3.1) are discussed
-  
-- Andy and Tiffany
-  - Come up with a mathematically driven causal inference model (multi-level treatments) 
-  - Decide which covariates should be adjusted for in IVLS or a re-do of Felson
-
-
-```{r}
-#knitr::purl("Andy_Meeting_Slides.Rmd")
-```
+## --------------------------------------------------------------------------------------------------------------------------------------------------
+knitr::purl("Andy_Meeting_Slides.R")
 
