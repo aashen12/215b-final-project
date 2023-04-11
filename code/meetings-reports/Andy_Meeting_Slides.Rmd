@@ -437,7 +437,7 @@ felson_2nd_spur %>%
 ## Next steps
 
 - Andy 
-  - Write up today's results into a latex document called `final-report.tex` (formatted by TD)
+  - Write up today's results into a latex document called `report-draft.tex` (formatted by TD)
   - Start preprocessing data for instrumental variables analysis
   - Look into doing IVLS with binary outcome (IV logistic regression)
 
