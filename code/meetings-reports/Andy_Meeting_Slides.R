@@ -4,6 +4,12 @@ library(htmltools)
 library(xtable)
 library(nnet)
 
+user <- "andy"
+
+if (user == "andy") {
+  setwd("~/Desktop/215b-final-project/code/meetings-reports")
+}
+
 
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
 # reading in data and recoding it
@@ -55,9 +61,9 @@ odds_ratio_f <- exp(tassoc_female_1st$coefficients) #%>% log()
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
 # inputting our numbers into a table for display
 df_1st_OR <- data.frame(
-  all_gender = odds_ratio_mf[-1] %>% rev(),
-  male = odds_ratio_m[-1] %>% rev(),
-  female = odds_ratio_f[-1] %>% rev() # do not need intercept coef
+  all_gender = tassoc_1st$coefficients[-1] %>% rev(),
+  male = tassoc_male_1st$coefficients[-1] %>% rev(),
+  female = tassoc_female_1st$coefficients[-1] %>% rev() # do not need intercept coef
 ) %>% t() %>% data.frame() %>% tibble()
 rownames(df_1st_OR) <- c("all_gender", "male", "female")
 names(df_1st_OR) <- c("gamma (occasionally)", "gamma (frequently)")
@@ -65,31 +71,13 @@ names(df_1st_OR) <- c("gamma (occasionally)", "gamma (frequently)")
 df_1st_OR_kbl <- df_1st_OR %>% 
   rownames_to_column("Gender")
 df_1st_OR_kbl
-print(xtable::xtable(df_1st_OR_kbl, digits = 1, 
-                     caption = "Our reproduced odds ratios from the first study.", 
+print(xtable::xtable(df_1st_OR_kbl, digits = 2, 
+                     caption = "Our reproduced gamma coefficients from the first study.", 
                      label = "table:our_or_1st"), 
       booktabs = TRUE, 
       align ="|c|c|c|")
 
 
-## --------------------------------------------------------------------------------------------------------------------------------------------------
-# inputting felson's numbers
-df_1st_Felson <- data.frame(
-  all_gender = c(3.98, 8.48),
-  male = c(3.57, 8.69),
-  female = c(4.41, 7.69)
-) %>% t() %>% data.frame() %>% tibble()
-rownames(df_1st_Felson) <- c("all_gender", "male", "female")
-names(df_1st_Felson) <- c("gamma (occasionally)", "gamma (frequently)")
-
-# display purposes
-df_1st_Felson_kbl <- df_1st_Felson %>% 
-  rownames_to_column("Gender")
-print(xtable::xtable(df_1st_Felson_kbl, digits = 1, 
-                     caption = "Felson's reported odds ratios from the first study.", 
-                     label = "table:felson_or_1st"), 
-      booktabs = TRUE, 
-      align ="|c|c|c|")
 
 
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -134,9 +122,10 @@ spur_df <- data.frame(
   "all_gender"  = spuriousness_all,
   "males" = spuriousness_male,
   "females" = spuriousness_female
-) %>% t() %>% data.frame()
+) %>% t() %>% data.frame() %>% tibble()
+rownames(spur_df) <- c("all_gender", "males", "females")
 names(spur_df) <- c("rho (occasionally)", "rho (frequently)")
-print(xtable::xtable(spur_df, digits = 1, 
+print(xtable::xtable(spur_df %>% rownames_to_column("Gender"), digits = 1, 
                      caption = "Our reproduced spuriousness values from the first study.", 
                      label = "table:our_spur_1st"), 
       booktabs = TRUE, 
@@ -168,7 +157,7 @@ df_second_study$contraception_sex <- relevel(df_second_study$contraception_sex, 
 df_second_study$contraception_use_words <- relevel(df_second_study$contraception_use_words, ref = "use")
 df_second_study$intoxication <- relevel(df_second_study$intoxication, ref = "never")
 
-df_2nd_logistic <- df_second_study
+df_2nd_logistic <- df_second_study %>% na.omit()
 
 
 ## ---- eval=TRUE------------------------------------------------------------------------------------------------------------------------------------

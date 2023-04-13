@@ -21,7 +21,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 57154249,2,occasionally,1,0,0,sober,no_use,sober_no_use
 57160648,1,never,1,0,1,sober,use,use
 57163116,1,frequently,1,0,1,sober,use,use
-57165288,2,never,1,0,0,sober,no_use,sober_no_use
+57165288,2,never,1,0,NA,sober,NA,sober_NA
 57165348,1,frequently,1,0,1,sober,use,use
 57166463,1,never,1,NA,1,sober,use,use
 57169110,1,never,1,0,1,sober,use,use
@@ -98,8 +98,8 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 90507350,2,occasionally,1,0,0,sober,no_use,sober_no_use
 90507957,2,never,1,0,1,sober,use,use
 90543102,1,never,1,1,0,sober,no_use,sober_no_use
-90543806,1,never,1,0,0,sober,no_use,sober_no_use
-90544204,2,occasionally,1,0,0,sober,no_use,sober_no_use
+90543806,1,never,1,0,NA,sober,NA,sober_NA
+90544204,2,occasionally,1,0,NA,sober,NA,sober_NA
 90570080,1,frequently,1,0,0,sober,no_use,sober_no_use
 90570118,2,never,1,0,0,sober,no_use,sober_no_use
 90570220,1,occasionally,1,0,1,sober,use,use
@@ -295,7 +295,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 90710085,1,never,1,NA,0,sober,no_use,sober_no_use
 90710184,2,never,1,0,1,sober,use,use
 90710874,1,occasionally,1,0,1,sober,use,use
-90712046,1,never,1,0,0,sober,no_use,sober_no_use
+90712046,1,never,1,0,NA,sober,NA,sober_NA
 90712348,2,never,1,NA,1,sober,use,use
 90712914,2,never,1,NA,0,sober,no_use,sober_no_use
 90713030,1,never,1,0,1,sober,use,use
@@ -470,7 +470,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 91575315,1,never,1,0,0,sober,no_use,sober_no_use
 91575361,2,never,1,0,1,sober,use,use
 91575365,1,occasionally,1,0,1,sober,use,use
-91575369,1,never,1,NA,0,sober,no_use,sober_no_use
+91575369,1,never,1,NA,NA,sober,NA,sober_NA
 91575387,1,never,1,NA,1,sober,use,use
 91575391,2,occasionally,1,1,1,intoxicated,use,use
 91575394,2,occasionally,1,1,1,intoxicated,use,use
@@ -514,7 +514,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 91578165,2,occasionally,1,0,0,sober,no_use,sober_no_use
 91578193,2,never,1,0,1,sober,use,use
 91578197,2,occasionally,1,0,0,sober,no_use,sober_no_use
-91578213,2,never,1,NA,0,sober,no_use,sober_no_use
+91578213,2,never,1,NA,NA,sober,NA,sober_NA
 91578287,1,never,1,0,1,sober,use,use
 91578305,1,never,1,NA,1,sober,use,use
 91578314,2,frequently,1,0,0,sober,no_use,sober_no_use
@@ -581,7 +581,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 91713106,2,never,1,2,1,sober,use,use
 91713604,2,occasionally,1,0,0,sober,no_use,sober_no_use
 91714099,1,never,1,NA,0,sober,no_use,sober_no_use
-91714212,1,occasionally,1,0,0,sober,no_use,sober_no_use
+91714212,1,occasionally,1,0,NA,sober,NA,sober_NA
 91714928,1,occasionally,1,0,1,sober,use,use
 91715124,1,never,1,NA,1,sober,use,use
 91715828,1,never,1,NA,1,sober,use,use
@@ -715,7 +715,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 92575420,2,never,1,0,1,sober,use,use
 92575434,2,occasionally,1,0,1,sober,use,use
 92575868,1,never,1,0,0,sober,no_use,sober_no_use
-92575905,1,occasionally,1,2,0,sober,no_use,sober_no_use
+92575905,1,occasionally,1,2,NA,sober,NA,sober_NA
 92575951,2,frequently,1,0,1,sober,use,use
 92575959,2,never,1,NA,0,sober,no_use,sober_no_use
 92575990,1,frequently,1,1,0,intoxicated,no_use,intoxicated_no_use
@@ -778,7 +778,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 92579949,1,occasionally,1,0,1,sober,use,use
 92579965,2,occasionally,1,0,0,sober,no_use,sober_no_use
 92579968,1,occasionally,1,0,1,sober,use,use
-92579970,2,never,1,2,0,sober,no_use,sober_no_use
+92579970,2,never,1,2,NA,sober,NA,sober_NA
 92579979,2,never,1,NA,1,sober,use,use
 92579985,2,never,1,0,0,sober,no_use,sober_no_use
 92579992,1,occasionally,1,1,0,intoxicated,no_use,intoxicated_no_use
@@ -896,7 +896,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 93572383,2,never,1,NA,1,sober,use,use
 93572389,2,never,1,NA,0,sober,no_use,sober_no_use
 93572391,1,occasionally,1,0,0,sober,no_use,sober_no_use
-93572668,1,never,1,0,0,sober,no_use,sober_no_use
+93572668,1,never,1,0,NA,sober,NA,sober_NA
 93572803,2,occasionally,1,1,0,intoxicated,no_use,intoxicated_no_use
 93572804,2,occasionally,1,0,1,sober,use,use
 93572864,1,never,1,0,0,sober,no_use,sober_no_use
@@ -992,7 +992,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 93577866,2,occasionally,1,0,0,sober,no_use,sober_no_use
 93577929,2,occasionally,1,1,1,intoxicated,use,use
 93578025,2,never,1,0,1,sober,use,use
-93578082,1,occasionally,1,1,0,intoxicated,no_use,intoxicated_no_use
+93578082,1,occasionally,1,1,NA,intoxicated,NA,intoxicated_NA
 93578101,2,never,1,NA,1,sober,use,use
 93578116,2,never,1,2,0,sober,no_use,sober_no_use
 93578142,1,frequently,1,0,1,sober,use,use
@@ -1059,7 +1059,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 93712272,1,occasionally,1,0,1,sober,use,use
 93712915,1,frequently,1,0,0,sober,no_use,sober_no_use
 93713294,1,occasionally,1,1,1,intoxicated,use,use
-93713409,1,never,1,NA,0,sober,no_use,sober_no_use
+93713409,1,never,1,NA,NA,sober,NA,sober_NA
 93714111,1,frequently,1,0,0,sober,no_use,sober_no_use
 93714317,1,never,1,NA,1,sober,use,use
 93714349,1,never,1,2,0,sober,no_use,sober_no_use
@@ -1210,7 +1210,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 94575942,1,never,1,0,0,sober,no_use,sober_no_use
 94575943,2,never,1,NA,0,sober,no_use,sober_no_use
 94575969,2,occasionally,1,0,1,sober,use,use
-94575985,2,never,1,NA,0,sober,no_use,sober_no_use
+94575985,2,never,1,NA,NA,sober,NA,sober_NA
 94575991,1,occasionally,1,0,1,sober,use,use
 94576007,2,occasionally,1,2,1,sober,use,use
 94576024,1,occasionally,1,0,0,sober,no_use,sober_no_use
@@ -1365,7 +1365,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 95546778,1,never,1,0,1,sober,use,use
 95546779,1,occasionally,1,0,1,sober,use,use
 95548969,2,never,1,NA,1,sober,use,use
-95570097,2,never,1,NA,0,sober,no_use,sober_no_use
+95570097,2,never,1,NA,NA,sober,NA,sober_NA
 95570294,1,frequently,1,1,1,intoxicated,use,use
 95570299,1,occasionally,1,0,0,sober,no_use,sober_no_use
 95570450,1,occasionally,1,0,1,sober,use,use
@@ -1386,7 +1386,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 95572111,2,occasionally,1,1,0,intoxicated,no_use,intoxicated_no_use
 95572115,1,occasionally,1,0,1,sober,use,use
 95572194,2,never,1,0,1,sober,use,use
-95572248,1,never,1,NA,0,sober,no_use,sober_no_use
+95572248,1,never,1,NA,NA,sober,NA,sober_NA
 95572283,1,never,1,NA,1,sober,use,use
 95572285,2,frequently,1,0,1,sober,use,use
 95572289,1,frequently,1,0,0,sober,no_use,sober_no_use
@@ -1403,7 +1403,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 95572925,2,occasionally,1,0,1,sober,use,use
 95572927,1,never,1,0,0,sober,no_use,sober_no_use
 95572981,2,never,1,NA,0,sober,no_use,sober_no_use
-95573031,1,never,1,NA,0,sober,no_use,sober_no_use
+95573031,1,never,1,NA,NA,sober,NA,sober_NA
 95573230,1,never,1,0,1,sober,use,use
 95573293,1,occasionally,1,0,1,sober,use,use
 95573412,2,occasionally,1,0,1,sober,use,use
@@ -1505,7 +1505,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 95578911,1,occasionally,1,0,1,sober,use,use
 95578939,1,never,1,NA,0,sober,no_use,sober_no_use
 95578948,2,never,1,0,1,sober,use,use
-95578986,1,never,1,NA,0,sober,no_use,sober_no_use
+95578986,1,never,1,NA,NA,sober,NA,sober_NA
 95578995,1,occasionally,1,0,1,sober,use,use
 95578997,1,never,1,NA,0,sober,no_use,sober_no_use
 95579234,1,never,1,0,1,sober,use,use
@@ -1550,7 +1550,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 95712312,2,occasionally,1,2,0,sober,no_use,sober_no_use
 95712314,2,never,1,NA,0,sober,no_use,sober_no_use
 95713193,1,never,1,NA,0,sober,no_use,sober_no_use
-95713806,2,never,1,NA,0,sober,no_use,sober_no_use
+95713806,2,never,1,NA,NA,sober,NA,sober_NA
 95714010,1,frequently,1,1,1,intoxicated,use,use
 95714020,1,occasionally,1,0,1,sober,use,use
 95714334,2,never,1,NA,1,sober,use,use
@@ -1567,7 +1567,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 95717469,1,occasionally,1,0,1,sober,use,use
 95717861,1,never,1,NA,1,sober,use,use
 95718107,2,never,1,NA,1,sober,use,use
-95718216,2,never,1,0,0,sober,no_use,sober_no_use
+95718216,2,never,1,0,NA,sober,NA,sober_NA
 95718396,1,never,1,NA,1,sober,use,use
 95718684,1,never,1,0,1,sober,use,use
 95718900,2,never,1,0,0,sober,no_use,sober_no_use
@@ -1689,7 +1689,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 96574390,2,never,1,NA,1,sober,use,use
 96574395,1,occasionally,1,1,1,intoxicated,use,use
 96574411,2,occasionally,1,0,1,sober,use,use
-96574419,1,never,1,0,0,sober,no_use,sober_no_use
+96574419,1,never,1,0,NA,sober,NA,sober_NA
 96574438,1,occasionally,1,0,1,sober,use,use
 96574589,2,occasionally,1,0,1,sober,use,use
 96574615,1,frequently,1,0,1,sober,use,use
@@ -1736,7 +1736,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 96576501,1,frequently,1,0,1,sober,use,use
 96576531,1,never,1,0,1,sober,use,use
 96576720,2,occasionally,1,0,0,sober,no_use,sober_no_use
-96576723,2,never,1,NA,0,sober,no_use,sober_no_use
+96576723,2,never,1,NA,NA,sober,NA,sober_NA
 96576750,1,never,1,NA,1,sober,use,use
 96576905,2,occasionally,1,0,1,sober,use,use
 96576922,1,never,1,NA,1,sober,use,use
@@ -1948,7 +1948,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 97575333,2,never,1,NA,0,sober,no_use,sober_no_use
 97575351,2,occasionally,1,0,0,sober,no_use,sober_no_use
 97575355,1,frequently,1,0,0,sober,no_use,sober_no_use
-97575356,1,never,1,0,0,sober,no_use,sober_no_use
+97575356,1,never,1,0,NA,sober,NA,sober_NA
 97575375,1,never,1,0,1,sober,use,use
 97575398,2,occasionally,1,0,1,sober,use,use
 97575406,1,occasionally,1,0,1,sober,use,use
@@ -2035,7 +2035,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 97711071,2,never,1,0,1,sober,use,use
 97711271,2,never,1,NA,1,sober,use,use
 97712349,2,occasionally,1,0,1,sober,use,use
-97713039,1,never,1,NA,0,sober,no_use,sober_no_use
+97713039,1,never,1,NA,NA,sober,NA,sober_NA
 97713393,2,occasionally,1,0,1,sober,use,use
 97713404,1,frequently,1,0,1,sober,use,use
 97713507,1,never,1,NA,1,sober,use,use
@@ -2059,7 +2059,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 98500035,1,occasionally,1,0,1,sober,use,use
 98500210,1,never,1,NA,0,sober,no_use,sober_no_use
 98500510,2,never,1,NA,1,sober,use,use
-98500558,2,never,1,0,0,sober,no_use,sober_no_use
+98500558,2,never,1,0,NA,sober,NA,sober_NA
 98500927,1,occasionally,1,0,0,sober,no_use,sober_no_use
 98500988,2,never,1,NA,1,sober,use,use
 98503002,1,never,1,0,1,sober,use,use
@@ -2109,7 +2109,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 98571451,1,occasionally,1,0,1,sober,use,use
 98571466,2,occasionally,1,0,0,sober,no_use,sober_no_use
 98571653,1,frequently,1,0,1,sober,use,use
-98571669,2,never,1,0,0,sober,no_use,sober_no_use
+98571669,2,never,1,0,NA,sober,NA,sober_NA
 98571878,1,occasionally,1,0,0,sober,no_use,sober_no_use
 98571910,2,occasionally,1,0,1,sober,use,use
 98571963,2,never,1,0,1,sober,use,use
@@ -2117,7 +2117,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 98572192,2,never,1,0,1,sober,use,use
 98572228,2,never,1,0,1,sober,use,use
 98572249,1,occasionally,1,0,1,sober,use,use
-98572266,1,never,1,NA,0,sober,no_use,sober_no_use
+98572266,1,never,1,NA,NA,sober,NA,sober_NA
 98572280,2,occasionally,1,0,1,sober,use,use
 98572283,1,never,1,NA,0,sober,no_use,sober_no_use
 98572287,2,occasionally,1,0,1,sober,use,use
@@ -2144,7 +2144,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 98573959,2,never,1,NA,0,sober,no_use,sober_no_use
 98574017,1,occasionally,1,0,1,sober,use,use
 98574034,2,never,1,NA,0,sober,no_use,sober_no_use
-98574202,1,never,1,0,0,sober,no_use,sober_no_use
+98574202,1,never,1,0,NA,sober,NA,sober_NA
 98574218,2,occasionally,1,0,0,sober,no_use,sober_no_use
 98574230,1,never,1,0,1,sober,use,use
 98574315,2,occasionally,1,0,1,sober,use,use
@@ -2184,7 +2184,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 98575954,1,occasionally,1,0,1,sober,use,use
 98575967,2,never,1,NA,0,sober,no_use,sober_no_use
 98575989,2,occasionally,1,0,1,sober,use,use
-98576010,1,never,1,0,0,sober,no_use,sober_no_use
+98576010,1,never,1,0,NA,sober,NA,sober_NA
 98576059,1,never,1,0,0,sober,no_use,sober_no_use
 98576193,1,never,1,NA,1,sober,use,use
 98576215,2,occasionally,1,0,0,sober,no_use,sober_no_use
@@ -2277,7 +2277,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 98713204,1,never,1,NA,1,sober,use,use
 98713806,1,never,1,NA,1,sober,use,use
 98714018,2,occasionally,1,1,0,intoxicated,no_use,intoxicated_no_use
-98714198,1,never,1,NA,0,sober,no_use,sober_no_use
+98714198,1,never,1,NA,NA,sober,NA,sober_NA
 98714230,1,never,1,NA,1,sober,use,use
 98714242,2,occasionally,1,0,1,sober,use,use
 98714312,2,occasionally,1,0,1,sober,use,use
@@ -2364,7 +2364,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 99571353,1,frequently,1,0,1,sober,use,use
 99571375,1,never,1,0,1,sober,use,use
 99571401,1,occasionally,1,0,1,sober,use,use
-99571419,2,never,1,NA,0,sober,no_use,sober_no_use
+99571419,2,never,1,NA,NA,sober,NA,sober_NA
 99571478,2,never,1,NA,0,sober,no_use,sober_no_use
 99571606,1,never,1,0,1,sober,use,use
 99571660,2,never,1,0,0,sober,no_use,sober_no_use
@@ -2461,7 +2461,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 99576906,1,occasionally,1,0,1,sober,use,use
 99576912,2,occasionally,1,1,0,intoxicated,no_use,intoxicated_no_use
 99576938,1,occasionally,1,0,1,sober,use,use
-99576944,1,never,1,NA,0,sober,no_use,sober_no_use
+99576944,1,never,1,NA,NA,sober,NA,sober_NA
 99576968,1,frequently,1,0,0,sober,no_use,sober_no_use
 99577050,2,never,1,0,1,sober,use,use
 99577265,1,frequently,1,1,0,intoxicated,no_use,intoxicated_no_use
@@ -2492,7 +2492,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,contraception_use,i
 99578693,1,occasionally,1,0,1,sober,use,use
 99578729,2,never,1,NA,1,sober,use,use
 99578741,2,occasionally,1,0,1,sober,use,use
-99578784,2,never,1,NA,0,sober,no_use,sober_no_use
+99578784,2,never,1,NA,NA,sober,NA,sober_NA
 99578806,1,never,1,NA,0,sober,no_use,sober_no_use
 99578809,2,never,1,NA,1,sober,use,use
 99578829,2,occasionally,1,0,0,sober,no_use,sober_no_use

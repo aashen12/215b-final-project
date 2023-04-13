@@ -13,7 +13,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 57113943,1,never,1,NA,sober
 57116359,1,never,0,NA,never
 57117542,1,never,1,NA,sober
-57117997,2,never,NA,NA,NA
+57117997,2,never,0,NA,never
 57118381,2,never,0,NA,never
 57118943,2,never,1,NA,sober
 57120005,1,never,0,NA,never
@@ -25,7 +25,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 57127241,2,never,0,NA,never
 57129567,1,never,0,NA,never
 57130633,1,never,0,NA,never
-57130838,1,never,NA,NA,NA
+57130838,1,never,0,NA,never
 57131432,1,never,1,2,sober
 57131909,1,never,0,NA,never
 57133772,2,never,0,NA,never
@@ -127,13 +127,13 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 57241075,2,never,0,NA,never
 57241170,2,never,1,NA,sober
 57242812,1,never,1,NA,sober
-57242885,2,never,NA,NA,NA
+57242885,2,never,0,NA,never
 57244606,2,never,1,NA,sober
 57245293,1,never,1,NA,sober
 57245315,2,never,1,NA,sober
 57245379,2,occasionally,1,0,sober
 57245533,1,never,0,NA,never
-57247222,1,occasionally,1,NA,NA
+57247222,1,occasionally,1,NA,intoxicated
 57248884,2,never,1,0,sober
 57249576,2,never,0,NA,never
 57251197,2,never,0,NA,never
@@ -217,7 +217,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 90507350,2,occasionally,1,0,sober
 90507957,2,never,1,0,sober
 90508033,2,never,0,NA,never
-90508165,2,never,NA,NA,NA
+90508165,2,never,0,NA,never
 90508325,2,never,0,NA,never
 90508577,2,occasionally,0,NA,never
 90508671,2,never,0,NA,never
@@ -347,7 +347,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 90572991,2,never,0,NA,never
 90572998,1,occasionally,1,0,sober
 90573011,2,frequently,1,0,sober
-90573013,1,never,NA,NA,NA
+90573013,1,never,0,NA,never
 90573117,2,occasionally,1,0,sober
 90573194,2,occasionally,1,0,sober
 90573212,1,never,0,NA,never
@@ -366,7 +366,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 90573946,2,never,1,0,sober
 90573947,1,never,1,NA,sober
 90573954,2,never,0,NA,never
-90573956,2,never,NA,NA,NA
+90573956,2,never,0,NA,never
 90573959,1,never,0,NA,never
 90573992,1,never,1,NA,sober
 90573994,1,occasionally,1,0,sober
@@ -409,7 +409,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 90575160,2,never,1,NA,sober
 90575167,2,occasionally,0,NA,never
 90575188,1,occasionally,1,0,sober
-90575202,2,never,NA,NA,NA
+90575202,2,never,0,NA,never
 90575205,1,never,1,NA,sober
 90575207,1,never,0,NA,never
 90575210,1,never,0,NA,never
@@ -500,7 +500,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 90577065,1,frequently,0,NA,never
 90577068,1,never,1,0,sober
 90577114,2,frequently,0,NA,never
-90577119,1,never,NA,NA,NA
+90577119,1,never,0,NA,never
 90577161,1,occasionally,0,NA,never
 90577167,2,occasionally,1,0,sober
 90577224,2,never,0,NA,never
@@ -577,7 +577,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 90578988,1,occasionally,1,0,sober
 90578999,2,never,0,NA,never
 90579230,1,frequently,1,1,intoxicated
-90579233,2,never,NA,NA,NA
+90579233,2,never,0,NA,never
 90579270,1,occasionally,1,0,sober
 90579271,2,never,0,NA,never
 90579272,2,never,0,NA,never
@@ -663,7 +663,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 90713030,1,never,1,0,sober
 90713391,2,never,0,NA,never
 90713395,2,never,0,NA,never
-90713507,1,never,NA,NA,NA
+90713507,1,never,0,NA,never
 90713702,1,never,0,NA,never
 90713909,2,never,0,NA,never
 90713930,1,never,0,NA,never
@@ -739,7 +739,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 90718225,1,never,0,NA,never
 90718268,2,never,0,NA,never
 90718273,2,never,0,NA,never
-90718280,1,never,NA,NA,NA
+90718280,1,never,0,NA,never
 90718285,1,never,0,NA,never
 90718287,1,occasionally,1,2,sober
 90718303,1,never,1,NA,sober
@@ -890,7 +890,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 91570776,2,never,0,NA,never
 91570789,1,never,0,NA,never
 91570817,1,never,1,NA,sober
-91570823,2,never,NA,NA,NA
+91570823,2,never,0,NA,never
 91570829,1,occasionally,1,0,sober
 91570921,1,never,0,NA,never
 91570928,1,occasionally,1,0,sober
@@ -1011,7 +1011,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 91573708,2,never,0,NA,never
 91573811,1,occasionally,1,0,sober
 91573902,2,never,0,NA,never
-91573926,1,never,NA,NA,NA
+91573926,1,never,0,NA,never
 91573940,1,occasionally,0,NA,never
 91573944,1,occasionally,1,0,sober
 91573948,1,never,0,NA,never
@@ -1231,11 +1231,11 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 91579245,2,occasionally,0,NA,never
 91579246,2,never,1,NA,sober
 91579248,1,never,0,NA,never
-91579257,1,never,NA,NA,NA
-91579258,2,never,NA,NA,NA
+91579257,1,never,0,NA,never
+91579258,2,never,0,NA,never
 91579272,2,never,1,0,sober
 91579296,1,frequently,1,1,intoxicated
-91579335,1,never,NA,NA,NA
+91579335,1,never,0,NA,never
 91579339,1,occasionally,1,0,sober
 91579932,1,occasionally,1,0,sober
 91579936,1,never,1,NA,sober
@@ -1573,7 +1573,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 92571709,1,occasionally,1,0,sober
 92571801,2,never,0,NA,never
 92571819,2,never,0,NA,never
-92571867,1,never,NA,NA,NA
+92571867,1,never,0,NA,never
 92572061,1,occasionally,1,0,sober
 92572101,1,never,1,NA,sober
 92572104,1,occasionally,0,NA,never
@@ -1709,7 +1709,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 92575247,1,never,1,NA,sober
 92575248,1,never,0,NA,never
 92575249,1,never,0,NA,never
-92575259,1,never,NA,NA,NA
+92575259,1,never,0,NA,never
 92575263,2,occasionally,1,0,sober
 92575292,1,occasionally,1,0,sober
 92575297,2,never,0,NA,never
@@ -1751,7 +1751,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 92575999,2,never,0,NA,never
 92576011,2,occasionally,0,NA,never
 92576033,1,never,0,NA,never
-92576037,2,frequently,1,NA,NA
+92576037,2,frequently,1,NA,intoxicated
 92576040,1,never,1,0,sober
 92576122,1,never,0,NA,never
 92576182,1,never,0,NA,never
@@ -1830,9 +1830,9 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 92578589,1,frequently,1,0,sober
 92578615,1,never,0,NA,never
 92578667,1,occasionally,1,0,sober
-92578684,1,never,NA,NA,NA
+92578684,1,never,0,NA,never
 92578722,1,never,1,0,sober
-92578783,1,never,NA,NA,NA
+92578783,1,never,0,NA,never
 92578846,2,never,0,NA,never
 92578860,2,never,0,NA,never
 92578889,1,never,1,NA,sober
@@ -1860,7 +1860,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 92579299,1,frequently,1,0,sober
 92579335,2,never,1,0,sober
 92579371,1,never,1,0,sober
-92579376,1,never,NA,NA,NA
+92579376,1,never,0,NA,never
 92579934,2,occasionally,1,0,sober
 92579935,2,never,0,NA,never
 92579937,2,never,0,NA,never
@@ -2012,12 +2012,12 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 92716976,2,never,1,NA,sober
 92716978,2,never,0,NA,never
 92716985,2,never,0,NA,never
-92717061,1,never,NA,NA,NA
+92717061,1,never,0,NA,never
 92717166,2,never,1,NA,sober
 92717265,2,never,0,NA,never
 92717368,2,never,0,NA,never
 92717460,1,never,0,NA,never
-92717862,1,never,NA,NA,NA
+92717862,1,never,0,NA,never
 92717866,1,never,1,NA,sober
 92717910,1,never,0,NA,never
 92717911,1,never,0,NA,never
@@ -2074,7 +2074,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 93500514,2,never,1,2,sober
 93500517,2,occasionally,0,NA,never
 93500815,1,never,0,NA,never
-93500915,2,never,NA,NA,NA
+93500915,2,never,0,NA,never
 93500972,2,occasionally,1,0,sober
 93500977,1,never,0,NA,never
 93501258,1,never,0,NA,never
@@ -2162,7 +2162,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 93570929,1,frequently,1,0,sober
 93570939,1,occasionally,0,NA,never
 93571010,2,never,1,NA,sober
-93571016,2,never,NA,NA,NA
+93571016,2,never,0,NA,never
 93571060,2,occasionally,1,0,sober
 93571065,1,occasionally,0,NA,never
 93571066,1,never,1,0,sober
@@ -2251,7 +2251,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 93573138,2,never,1,0,sober
 93573190,2,never,0,NA,never
 93573223,2,never,0,NA,never
-93573229,1,never,NA,NA,NA
+93573229,1,never,0,NA,never
 93573299,2,never,1,NA,sober
 93573313,2,occasionally,1,0,sober
 93573326,2,never,0,NA,never
@@ -2266,7 +2266,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 93573699,1,never,1,NA,sober
 93573916,1,never,0,NA,never
 93573922,1,never,0,NA,never
-93573923,1,never,NA,NA,NA
+93573923,1,never,0,NA,never
 93573933,1,occasionally,0,NA,never
 93573940,1,frequently,0,NA,never
 93573942,2,never,0,NA,never
@@ -2499,8 +2499,8 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 93579945,1,never,0,NA,never
 93579948,1,occasionally,0,NA,never
 93579949,1,frequently,1,0,sober
-93579950,1,never,NA,NA,NA
-93579951,2,never,NA,NA,NA
+93579950,1,never,0,NA,never
+93579951,2,never,0,NA,never
 93579958,1,never,0,NA,never
 93579959,1,never,0,NA,never
 93579960,1,never,0,NA,never
@@ -2551,7 +2551,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 93678674,2,never,0,NA,never
 93678779,2,occasionally,1,0,sober
 93710011,1,never,1,NA,sober
-93710031,2,never,NA,NA,NA
+93710031,2,never,0,NA,never
 93710092,1,never,0,NA,never
 93710179,2,never,0,NA,never
 93710182,1,never,0,NA,never
@@ -2608,7 +2608,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 93714317,1,never,1,NA,sober
 93714349,1,never,1,2,sober
 93714387,2,never,0,NA,never
-93714398,1,never,NA,NA,NA
+93714398,1,never,0,NA,never
 93714847,1,never,0,NA,never
 93714890,1,never,0,NA,never
 93714896,2,never,0,NA,never
@@ -2665,7 +2665,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 93716976,2,never,0,NA,never
 93716993,2,never,0,NA,never
 93717060,2,never,0,NA,never
-93717156,1,never,NA,NA,NA
+93717156,1,never,0,NA,never
 93717162,1,never,0,NA,never
 93717257,2,occasionally,1,0,sober
 93717265,2,never,0,NA,never
@@ -2753,7 +2753,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 94506352,1,occasionally,1,0,sober
 94506376,1,occasionally,1,0,sober
 94506497,1,never,0,NA,never
-94506520,1,never,NA,NA,NA
+94506520,1,never,0,NA,never
 94506575,1,never,1,0,sober
 94506686,1,never,0,NA,never
 94506827,1,occasionally,1,0,sober
@@ -3082,7 +3082,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 94577981,2,never,0,NA,never
 94578088,2,never,1,NA,sober
 94578095,1,occasionally,1,1,intoxicated
-94578096,1,never,NA,NA,NA
+94578096,1,never,0,NA,never
 94578101,2,occasionally,1,0,sober
 94578106,1,occasionally,1,0,sober
 94578110,2,occasionally,0,NA,never
@@ -3210,7 +3210,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 94711177,1,never,0,NA,never
 94711261,1,never,1,NA,sober
 94711266,2,occasionally,0,NA,never
-94711862,2,never,NA,NA,NA
+94711862,2,never,0,NA,never
 94711973,1,never,1,0,sober
 94711974,2,never,0,NA,never
 94712047,2,never,0,NA,never
@@ -3243,7 +3243,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 94714231,1,never,0,NA,never
 94714237,2,never,0,NA,never
 94714240,2,occasionally,1,1,intoxicated
-94714242,1,never,NA,NA,NA
+94714242,1,never,0,NA,never
 94714244,2,occasionally,0,NA,never
 94714245,2,never,0,NA,never
 94714310,1,never,0,NA,never
@@ -3310,7 +3310,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 94718329,2,occasionally,0,NA,never
 94718342,1,never,0,NA,never
 94718393,2,occasionally,1,0,sober
-94718485,2,never,NA,NA,NA
+94718485,2,never,0,NA,never
 94718687,2,never,1,NA,sober
 94718880,1,never,0,NA,never
 94718888,2,never,0,NA,never
@@ -3375,7 +3375,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 95506395,1,occasionally,0,NA,never
 95506426,1,never,1,0,sober
 95506482,2,never,0,NA,never
-95506527,2,never,NA,NA,NA
+95506527,2,never,0,NA,never
 95506570,2,occasionally,1,0,sober
 95506680,2,occasionally,0,NA,never
 95506684,2,occasionally,1,0,sober
@@ -3385,7 +3385,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 95507214,2,occasionally,1,0,sober
 95507311,1,frequently,1,0,sober
 95507914,2,never,1,NA,sober
-95508034,1,occasionally,NA,NA,NA
+95508034,1,occasionally,0,NA,never
 95508271,1,occasionally,1,0,sober
 95508323,1,never,1,0,sober
 95508339,2,never,0,NA,never
@@ -3397,7 +3397,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 95508980,2,never,1,0,sober
 95508981,1,never,0,NA,never
 95508984,2,never,0,NA,never
-95540910,2,never,NA,NA,NA
+95540910,2,never,0,NA,never
 95543606,1,never,1,NA,sober
 95543704,2,frequently,1,1,intoxicated
 95544183,2,occasionally,1,2,sober
@@ -3426,7 +3426,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 95570621,2,never,1,0,sober
 95570692,1,occasionally,1,0,sober
 95570789,1,never,0,NA,never
-95570852,1,never,NA,NA,NA
+95570852,1,never,0,NA,never
 95570929,1,never,1,0,sober
 95571018,2,never,0,NA,never
 95571074,2,occasionally,0,NA,never
@@ -3511,7 +3511,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 95573233,1,occasionally,0,NA,never
 95573293,1,occasionally,1,0,sober
 95573294,1,occasionally,0,NA,never
-95573329,1,never,NA,NA,NA
+95573329,1,never,0,NA,never
 95573333,1,never,0,NA,never
 95573407,1,never,0,NA,never
 95573412,2,occasionally,1,0,sober
@@ -3758,7 +3758,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 95579943,2,occasionally,0,NA,never
 95579944,1,occasionally,1,0,sober
 95579947,1,never,0,NA,never
-95579957,2,never,NA,NA,NA
+95579957,2,never,0,NA,never
 95579960,1,never,0,NA,never
 95579962,1,never,0,NA,never
 95579963,2,frequently,1,0,sober
@@ -3786,10 +3786,10 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 95619962,2,never,0,NA,never
 95624976,2,never,0,NA,never
 95646127,2,never,1,0,sober
-95676151,2,never,NA,NA,NA
+95676151,2,never,0,NA,never
 95676153,2,never,1,0,sober
 95676729,1,never,1,NA,sober
-95676822,1,never,NA,NA,NA
+95676822,1,never,0,NA,never
 95676952,1,occasionally,1,0,sober
 95678073,2,never,0,NA,never
 95678077,2,occasionally,1,0,sober
@@ -3865,7 +3865,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 95715358,1,never,1,NA,sober
 95715359,2,never,0,NA,never
 95715368,2,occasionally,0,NA,never
-95715393,1,never,NA,NA,NA
+95715393,1,never,0,NA,never
 95715395,1,never,0,NA,never
 95715924,1,never,0,NA,never
 95715933,1,occasionally,0,NA,never
@@ -3891,7 +3891,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 95716292,1,never,1,NA,sober
 95716318,1,never,0,NA,never
 95716339,2,never,0,NA,never
-95716424,2,never,NA,NA,NA
+95716424,2,never,0,NA,never
 95716826,2,never,0,NA,never
 95716862,1,never,0,NA,never
 95716882,1,never,0,NA,never
@@ -3953,7 +3953,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 95719936,2,never,0,NA,never
 95719937,2,never,1,0,sober
 95719973,1,never,1,0,sober
-95719975,2,never,NA,NA,NA
+95719975,2,never,0,NA,never
 95719977,2,occasionally,1,0,sober
 96316056,2,never,0,NA,never
 96316155,1,never,0,NA,never
@@ -4111,7 +4111,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 96572218,2,occasionally,0,NA,never
 96572221,2,never,0,NA,never
 96572224,2,never,0,NA,never
-96572225,1,never,NA,NA,NA
+96572225,1,never,0,NA,never
 96572226,1,never,1,1,sober
 96572227,2,never,0,NA,never
 96572260,1,occasionally,0,NA,never
@@ -4385,11 +4385,11 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 96579175,2,never,1,1,sober
 96579178,1,occasionally,1,0,sober
 96579230,1,never,0,NA,never
-96579233,1,never,NA,NA,NA
+96579233,1,never,0,NA,never
 96579236,1,never,0,NA,never
 96579238,2,never,1,NA,sober
 96579244,2,never,0,NA,never
-96579257,2,never,NA,NA,NA
+96579257,2,never,0,NA,never
 96579259,1,never,0,NA,never
 96579261,2,never,1,0,sober
 96579262,1,never,0,NA,never
@@ -4414,7 +4414,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 96579943,1,never,0,NA,never
 96579944,1,occasionally,1,0,sober
 96579947,1,occasionally,0,NA,never
-96579958,1,never,NA,NA,NA
+96579958,1,never,0,NA,never
 96579962,2,never,0,NA,never
 96579963,1,never,0,NA,never
 96579966,2,never,1,0,sober
@@ -4452,7 +4452,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 96676455,1,never,0,NA,never
 96676651,1,never,0,NA,never
 96676724,1,never,0,NA,never
-96676757,1,never,NA,NA,NA
+96676757,1,never,0,NA,never
 96676820,1,occasionally,0,NA,never
 96676958,1,never,1,0,sober
 96678070,2,never,0,NA,never
@@ -4493,7 +4493,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 96712213,2,never,0,NA,never
 96712215,2,never,0,NA,never
 96712299,1,never,0,NA,never
-96712311,1,occasionally,1,NA,NA
+96712311,1,occasionally,1,NA,intoxicated
 96712349,2,never,0,NA,never
 96712372,2,never,0,NA,never
 96712399,1,never,1,NA,sober
@@ -4566,7 +4566,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 96716339,1,never,0,NA,never
 96716422,2,never,0,NA,never
 96716489,2,never,0,NA,never
-96716523,1,never,NA,NA,NA
+96716523,1,never,0,NA,never
 96716667,2,never,0,NA,never
 96716903,2,frequently,1,0,sober
 96716904,2,never,0,NA,never
@@ -4593,7 +4593,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 96718013,1,never,1,NA,sober
 96718041,1,never,0,NA,never
 96718145,1,never,0,NA,never
-96718148,2,never,NA,NA,NA
+96718148,2,never,0,NA,never
 96718172,1,never,0,NA,never
 96718193,2,never,0,NA,never
 96718202,1,never,0,NA,never
@@ -4681,11 +4681,11 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 97543903,1,occasionally,0,NA,never
 97544984,2,never,1,0,sober
 97546478,1,occasionally,1,0,sober
-97546678,NA,never,NA,NA,NA
+97546678,NA,never,0,NA,never
 97546871,2,never,0,NA,never
-97548372,1,never,NA,NA,NA
+97548372,1,never,0,NA,never
 97570024,2,never,1,0,sober
-97570058,2,never,NA,NA,NA
+97570058,2,never,0,NA,never
 97570077,2,never,0,NA,never
 97570088,1,never,1,NA,sober
 97570089,2,never,1,NA,sober
@@ -4847,7 +4847,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 97574835,2,never,1,0,sober
 97574839,1,occasionally,1,0,sober
 97574911,1,frequently,1,0,sober
-97574939,2,never,NA,NA,NA
+97574939,2,never,0,NA,never
 97575003,2,never,1,NA,sober
 97575020,2,never,0,NA,never
 97575092,2,never,1,0,sober
@@ -5034,8 +5034,8 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 97579938,1,occasionally,1,0,sober
 97579946,1,occasionally,0,NA,never
 97579948,1,never,0,NA,never
-97579950,1,never,NA,NA,NA
-97579955,1,never,NA,NA,NA
+97579950,1,never,0,NA,never
+97579955,1,never,0,NA,never
 97579960,2,never,0,NA,never
 97579963,1,never,0,NA,never
 97579967,2,occasionally,0,NA,never
@@ -5095,7 +5095,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 97711072,2,never,0,NA,never
 97711075,1,never,0,NA,never
 97711271,2,never,1,NA,sober
-97711272,1,never,NA,NA,NA
+97711272,1,never,0,NA,never
 97711377,2,occasionally,0,NA,never
 97712212,2,never,0,NA,never
 97712240,2,never,0,NA,never
@@ -5116,7 +5116,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 97713393,2,occasionally,1,0,sober
 97713404,1,frequently,1,0,sober
 97713507,1,never,1,NA,sober
-97713607,1,never,NA,NA,NA
+97713607,1,never,0,NA,never
 97713990,2,never,0,NA,never
 97713994,1,never,0,NA,never
 97714011,2,never,0,NA,never
@@ -5147,7 +5147,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 97715898,1,never,0,NA,never
 97715952,2,never,0,NA,never
 97715953,1,never,0,NA,never
-97715983,2,never,NA,NA,NA
+97715983,2,never,0,NA,never
 97715984,1,never,0,NA,never
 97715986,1,never,0,NA,never
 97715987,1,never,0,NA,never
@@ -5219,7 +5219,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98500533,1,never,0,NA,never
 98500558,2,never,1,0,sober
 98500631,2,occasionally,0,NA,never
-98500636,1,never,NA,NA,NA
+98500636,1,never,0,NA,never
 98500659,1,never,0,NA,never
 98500831,1,never,0,NA,never
 98500910,1,never,0,NA,never
@@ -5285,9 +5285,9 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98540257,1,never,1,NA,sober
 98540352,1,never,1,0,sober
 98540656,1,never,0,NA,never
-98540752,2,never,NA,NA,NA
+98540752,2,never,0,NA,never
 98544206,2,never,0,NA,never
-98546321,2,never,NA,NA,NA
+98546321,2,never,0,NA,never
 98570080,2,never,1,NA,sober
 98570081,1,occasionally,1,0,sober
 98570122,2,never,1,0,sober
@@ -5379,7 +5379,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98572908,2,never,1,NA,sober
 98572909,2,occasionally,1,1,intoxicated
 98572910,1,never,1,0,sober
-98572913,1,never,NA,NA,NA
+98572913,1,never,0,NA,never
 98572922,2,occasionally,0,NA,never
 98572926,1,never,1,NA,sober
 98572927,1,occasionally,0,NA,never
@@ -5424,7 +5424,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98574017,1,occasionally,1,0,sober
 98574021,1,never,0,NA,never
 98574034,2,never,1,NA,sober
-98574086,2,never,NA,NA,NA
+98574086,2,never,0,NA,never
 98574106,1,never,0,NA,never
 98574193,2,never,0,NA,never
 98574202,1,never,1,0,sober
@@ -5438,7 +5438,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98574415,2,never,1,NA,sober
 98574485,2,occasionally,1,0,sober
 98574491,2,occasionally,1,0,sober
-98574498,1,never,NA,NA,NA
+98574498,1,never,0,NA,never
 98574595,1,occasionally,1,1,intoxicated
 98574628,1,never,0,NA,never
 98574636,1,never,1,NA,sober
@@ -5456,7 +5456,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98575107,2,occasionally,1,0,sober
 98575113,2,occasionally,1,0,sober
 98575122,1,frequently,1,1,intoxicated
-98575128,1,never,NA,NA,NA
+98575128,1,never,0,NA,never
 98575150,1,never,0,NA,never
 98575157,2,never,1,NA,sober
 98575165,2,occasionally,0,NA,never
@@ -5514,7 +5514,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98576250,2,never,0,NA,never
 98576261,2,never,0,NA,never
 98576283,1,never,0,NA,never
-98576313,1,never,NA,NA,NA
+98576313,1,never,0,NA,never
 98576335,1,never,0,NA,never
 98576339,2,never,1,0,sober
 98576346,1,never,0,NA,never
@@ -5605,9 +5605,9 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98578767,2,occasionally,1,0,sober
 98578782,2,never,1,0,sober
 98578828,2,never,0,NA,never
-98578862,1,never,NA,NA,NA
+98578862,1,never,0,NA,never
 98578929,2,occasionally,1,0,sober
-98578943,2,never,NA,NA,NA
+98578943,2,never,0,NA,never
 98578980,2,never,1,NA,sober
 98578996,2,never,1,0,sober
 98579230,1,never,1,NA,sober
@@ -5623,9 +5623,9 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98579940,1,occasionally,0,NA,never
 98579945,1,never,0,NA,never
 98579948,1,occasionally,1,1,intoxicated
-98579952,1,never,NA,NA,NA
-98579953,2,never,NA,NA,NA
-98579954,2,never,NA,NA,NA
+98579952,1,never,0,NA,never
+98579953,2,never,0,NA,never
+98579954,2,never,0,NA,never
 98579955,2,never,1,NA,sober
 98579957,2,never,0,NA,never
 98579960,1,never,1,NA,sober
@@ -5762,7 +5762,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98716386,2,never,0,NA,never
 98716390,1,never,0,NA,never
 98716423,2,occasionally,0,NA,never
-98716425,1,never,NA,NA,NA
+98716425,1,never,0,NA,never
 98716467,1,occasionally,0,NA,never
 98716827,2,never,0,NA,never
 98716897,2,never,0,NA,never
@@ -5774,7 +5774,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98717259,2,never,0,NA,never
 98717263,1,never,0,NA,never
 98717358,2,never,0,NA,never
-98717960,1,never,NA,NA,NA
+98717960,1,never,0,NA,never
 98718017,1,never,0,NA,never
 98718086,1,never,1,0,sober
 98718108,1,never,0,NA,never
@@ -5806,7 +5806,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 98719935,2,never,0,NA,never
 99316152,1,occasionally,0,NA,never
 99316356,2,occasionally,0,NA,never
-99316951,1,never,NA,NA,NA
+99316951,1,never,0,NA,never
 99316952,2,never,0,NA,never
 99374970,2,never,0,NA,never
 99374972,2,never,0,NA,never
@@ -5987,7 +5987,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 99572283,1,never,0,NA,never
 99572288,2,never,0,NA,never
 99572290,2,never,1,0,sober
-99572293,2,never,NA,NA,NA
+99572293,2,never,0,NA,never
 99572304,2,occasionally,0,NA,never
 99572317,2,occasionally,1,0,sober
 99572321,1,occasionally,1,1,intoxicated
@@ -6019,7 +6019,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 99572971,1,never,0,NA,never
 99572972,1,occasionally,1,0,sober
 99572975,1,never,0,NA,never
-99572983,1,never,NA,NA,NA
+99572983,1,never,0,NA,never
 99572984,2,never,1,0,sober
 99572986,2,never,1,NA,sober
 99572988,1,never,1,NA,sober
@@ -6038,7 +6038,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 99573295,1,never,1,0,sober
 99573314,1,occasionally,1,1,intoxicated
 99573316,1,never,0,NA,never
-99573324,1,never,NA,NA,NA
+99573324,1,never,0,NA,never
 99573328,1,never,0,NA,never
 99573394,1,never,0,NA,never
 99573433,2,never,1,0,sober
@@ -6291,9 +6291,9 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 99579933,2,never,0,NA,never
 99579939,2,never,0,NA,never
 99579947,1,never,0,NA,never
-99579952,1,never,NA,NA,NA
+99579952,1,never,0,NA,never
 99579954,1,never,0,NA,never
-99579956,2,never,NA,NA,NA
+99579956,2,never,0,NA,never
 99579961,1,occasionally,0,NA,never
 99579964,2,never,0,NA,never
 99579966,2,never,0,NA,never
@@ -6402,7 +6402,7 @@ AID,sex,intoxication,intercourse_dummy,intox_most_recent_sex,intox_most_recent_s
 99713999,2,never,1,NA,sober
 99714126,2,never,0,NA,never
 99714185,2,never,0,NA,never
-99714324,2,never,NA,NA,NA
+99714324,2,never,0,NA,never
 99714346,2,never,0,NA,never
 99714387,1,never,0,NA,never
 99714927,2,never,0,NA,never
