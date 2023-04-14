@@ -283,16 +283,25 @@ df_second_study$intox_most_recent_sex_words <- ifelse(
 # assume NA means they did not use 
 # we may need to remove these entries later
 
-df_second_study$contraception_use_words <- ifelse(df_second_study$contraception_use == 0, "no_use", "use")
+df_second_study$contraception_use_words <- ifelse(df_second_study$contraception_use == 0, 
+                                                  "no_use",
+                                                  ifelse(df_second_study$contraception_use == 1, "use", df_second_study$contraception_use))
 
 
 df_second_study$contraception_sex <- ifelse(
   df_second_study$contraception_use %in% c(1),
   "use",
-  paste0(df_second_study$intox_most_recent_sex_words, "_", ifelse(df_second_study$contraception_use == 0, "no_use", "use"))
+  paste0(df_second_study$intox_most_recent_sex_words, "_", df_second_study$contraception_use_words)
 )
 # never_no_use: never drank, did not use contraception
 # sober_no_use: sober, did not use contraception, etc...
+
+df_second_study$contraception_sex <- ifelse(
+  df_second_study$contraception_sex %in% c("sober_NA", "intoxicated_NA"),
+  NA,
+  df_second_study$contraception_sex
+)
+
 
 df_second_study %>% sample_n(12)
 
@@ -382,13 +391,16 @@ df_iv$intox_most_recent_sex_words[is.na(df_iv$intox_most_recent_sex_words)] <- "
 # assume NA means they did not use 
 # we may need to remove these entries later
 
-df_iv$contraception_use_words <- ifelse(df_iv$contraception_use == 0, "no_use", "use")
 
+
+df_iv$contraception_use_words <- ifelse(df_iv$contraception_use == 0, 
+                                                  "no_use",
+                                                  ifelse(df_iv$contraception_use == 1, "use", df_iv$contraception_use))
 
 df_iv$contraception_sex <- ifelse(
   df_iv$contraception_use %in% c(1),
   "use",
-  paste0(df_iv$intox_most_recent_sex_words, "_", ifelse(df_iv$contraception_use == 0, "no_use", "use"))
+  paste0(df_iv$intox_most_recent_sex_words, "_", df_iv$contraception_use_words)
 )
 
 ### Re-coding parental covariates ###

@@ -17,7 +17,7 @@ df_iv <- read_csv("processed-data/iv_analysis_file.csv") %>%
   dplyr::mutate_at(
     vars(intoxication, 
          intercourse_dummy, intox_most_recent_sex_words, 
-         contraception_use_words, contraception_sex, 
+         contraception_use_words, contraception_sex,
          parent_drink_freq_words, parent_drunk_words, 
          alc_in_home, adult_care), 
     factor
@@ -32,13 +32,16 @@ df_iv$intox_most_recent_sex_words <- relevel(df_iv$intox_most_recent_sex_words %
 
 df_iv$contraception_use_words <- relevel(df_iv$contraception_use_words, 
                                          ref = "use")
-df_iv$contraception_sex <- relevel(df_iv$contraception_sex, 
-                                   ref = "use")
+
 
 df_iv$parent_drink_freq_words <- relevel(df_iv$parent_drink_freq_words %>% factor(levels = c("never", "occasionally", "frequently")), 
                                          ref = "never")
 df_iv$parent_drunk_words <- relevel(df_iv$parent_drunk_words, 
                                     ref = "never")
+
+
+df_iv$contraception_sex <- relevel(df_iv$contraception_sex, 
+                                   ref = "use")
 
 df_iv %>% sample_n(12)
 
@@ -49,6 +52,8 @@ levels(df_iv_sex$contraception_sex)
 
 df_iv_sex$contraception_use_words <- droplevels(df_iv_sex$contraception_use_words)
 levels(df_iv_sex$contraception_use_words)
+
+
 
 #### Parent alcoholism instrument ####
 
