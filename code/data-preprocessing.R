@@ -439,9 +439,9 @@ df_iv$parent_drink_freq_words <- ifelse(
 
 
 df_iv$parent_drunk_words <- ifelse(
-  df_iv$parent_drunk %in% c(3, 4, 5, 6) | is.na(df_iv$parent_drunk),
+  df_iv$parent_drunk %in% c(2, 3, 4, 5, 6),
   "frequently",
-  "never" # only doing this once counts as as never
+  "never"
 )
 
 
