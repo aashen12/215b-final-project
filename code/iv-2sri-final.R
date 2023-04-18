@@ -296,7 +296,7 @@ capitalize_first <- function(labels) {
   })
 }
 
-fs <- 17 # font
+fs <- 19 # font
 
 intercourse_full %>% 
   bind_rows(contraception_full) %>% 
