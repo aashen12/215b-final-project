@@ -246,6 +246,9 @@ intercourse_sd <- contraception_sd <- matrix(NA, 3, 3)
 rownames(intercourse_sd) <- rownames(contraception_sd) <- c("all_gender", "males", "females")
 colnames(intercourse_sd) <- colnames(contraception_sd) <- c("est", "sd", "p_val")
 
+df_iv_intercourse <- df_iv
+df_iv_sex <- df_sex
+
 felson_intercourse_all <- glm(intercourse_dummy ~ intoxication_bin,
                               data = df_iv_intercourse, family = "binomial")
 intercourse_sd[1, ] <- summary(felson_intercourse_all)$coefficients[2, c(1:2, 4)]
