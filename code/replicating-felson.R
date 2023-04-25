@@ -7,13 +7,13 @@ library(nnet)
 user <- "andy"
 
 if (user == "andy") {
-  setwd("~/Desktop/215b-final-project/code/meetings-reports")
+  setwd("~/Desktop/215b-final-project/code")
 }
 
 
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
 # reading in data and recoding it
-df_first_study <- read_csv("../processed-data/intox_sex_file.csv")
+df_first_study <- read_csv("processed-data/intox_sex_file.csv")
 
 df_first_study$sex <- as.character(df_first_study$sex)
 
@@ -147,7 +147,7 @@ print(xtable::xtable(felson_1st_spur %>% rownames_to_column("Gender"), digits = 
 
 
 ## --------------------------------------------------------------------------------------------------------------------------------------------------
-df_second_study <- read_csv("../processed-data/intox_contraception_file.csv") %>% 
+df_second_study <- read_csv("processed-data/intox_contraception_file.csv") %>% 
   dplyr::select(-intox_most_recent_sex, -intercourse_dummy, -contraception_use, -intox_most_recent_sex_words) %>% 
   dplyr::mutate_at(vars(sex, intoxication, contraception_use_words, contraception_sex), factor)
 

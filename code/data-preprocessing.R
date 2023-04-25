@@ -191,6 +191,8 @@ nnnn
 df_first_study[nnnn,]
 
 df_first_study$intox_most_recent_sex_words[is.na(df_first_study$intox_most_recent_sex_words)] <- "intoxicated"
+# all of the respondents with NA are drinkers (there are 3), so we impute them with being intoxicated.
+
 
 # recoding the data as done by felson 2020
 # Felson 2020 do not provide a way to account for missing data. We treat them as nevers here. 

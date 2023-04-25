@@ -77,11 +77,11 @@ rcompanion::cramerV(df_iv$parent_drink_freq_words, df_iv$intoxication_bin)
 
 
 
-fs <- 14
+fs <- 23
 
 
 drink <- data.frame(
-  parent_drink = df_iv$alc_in_home,
+  parent_drink = df_iv$smoke_household,
   child_drink = df_iv$intoxication_bin
 ) %>%
   count(parent_drink, child_drink) %>%
@@ -97,8 +97,9 @@ instr_exposure <- data.frame(
   group_by(parent_drink) %>%
   mutate(proportion = n / sum(n)) %>%
   ungroup() %>% 
+  na.omit() %>% 
   ggplot(aes(x = parent_drink, y = proportion, fill = child_drink)) +
-  geom_bar(stat = "identity", position = "dodge") +
+  geom_bar(stat = "identity", position = "dodge", color = "black") +
   labs(x = "Alcohol in Home", y = "Proportion", 
        fill = "Resp. Alcohol Use") +
   theme_bw() + theme(
@@ -111,7 +112,12 @@ instr_exposure <- data.frame(
     plot.caption = element_text(size = fs)
   )
 instr_exposure
-# ggsave(filename = "images/parent_child_alc.png")
+
+
+
+
+
+ggsave(filename = "images/parent_child_alc.png")
 
 
 
