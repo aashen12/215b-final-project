@@ -91,7 +91,7 @@ df_sex <- df_iv %>% dplyr::filter(intercourse_dummy == 1) #%>% na.omit()
 
 ivCombo <- function(int_df = df_iv, cont_df = df_sex) {
   all_instruments <- c("parent_drink_freq_words", "alc_in_home", "smoke_household")
-  instruments <- all_instruments[c(1, 2)]
+  instruments <- all_instruments[c(2, 3)]
   
   df_iv_intercourse <- int_df[!is.na(int_df[[instruments[1]]]) & !is.na(int_df[[instruments[2]]]), ]
   
@@ -233,7 +233,7 @@ df_full %>%
   # geom_point(aes(color = instrument), size = 6) + 
   geom_bar(stat = "identity", position = "dodge", color = "black") + 
   scale_fill_manual(values = c("steelblue", "orange"),
-                    labels = c("None", "Two Alcoholic Instruments")) + 
+                    labels = c("None", "Smoking + Alc. Availability")) + 
   scale_x_discrete(labels = c("All Gender", "Females", "Males")) + 
   labs(x = "Gender", y = TeX("Regression Coefficient $\\widehat{\\gamma}$"), fill = "Instrument") + 
   facet_grid(~study, labeller = labeller(study = capitalize_first)) + 
@@ -248,7 +248,7 @@ df_full %>%
         plot.title = element_text(hjust = 0.5)) + 
   #ggtitle(TeX(" 2SRI $\\widehat{\\gamma}$ coefficients by instrument")) + 
   geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.24, position = position_dodge(0.9))
-ggsave("images/iv_combo_coefs.png")
+ggsave("images/iv_combo_coefs_avail_smoke.png")
 
 
 
